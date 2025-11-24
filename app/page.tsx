@@ -12,8 +12,8 @@ export default function HomePage() {
     <main className="min-h-screen bg-white">
       <Header />
       <Hero />
-      <About />
       <Products />
+      <About />
       <Differentials />
       <Contact />
       <Footer />

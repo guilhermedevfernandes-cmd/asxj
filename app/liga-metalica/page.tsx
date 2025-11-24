@@ -25,6 +25,13 @@ const esnProducts: Product[] = [
     features: ["Baixo custo", "Corte livre", "Formato irregular", "Ideal para baixa temperatura"]
   },
   {
+    code: "ESN 200",
+    title: "ESN 200",
+    description: "Este é outro material de resistência média e ótimo custo-benefício. Possui uma proporção menor de cristais cubo-octaédricos do que o ESN 300, mas ainda assim é um produto bem formado, com alta estabilidade térmica, que tende a funcionar extremamente bem em uma ampla variedade de aplicações onde é necessário um grão resistente.",
+    strength: "Força intermediária",
+    features: ["Resistência média", "Ótimo custo-benefício", "Alta estabilidade térmica", "Bem formado", "Ampla variedade de aplicações"]
+  },
+  {
     code: "ESN 300",
     title: "ESN 300",
     description: "Grão de resistência média e uso geral, com alta proporção de cristais cubo-octaédricos. Diamante sintético forte e versátil, ideal para aplicações de média a alta exigência.",
@@ -125,6 +132,19 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     return "bg-blue-100 text-blue-800 border-blue-300";
   };
 
+  // Determina o caminho da imagem baseado no código do produto
+  const getImagePath = (code: string) => {
+    // Os arquivos estão nomeados exatamente como o código do produto (ex: "ESN 050.png")
+    if (code.startsWith("ESN")) {
+      return `/ESN/${code}.png`;
+    } else if (code.startsWith("EDA")) {
+      return `/EDA/${code}.png`;
+    }
+    return null;
+  };
+
+  const imagePath = getImagePath(product.code);
+
   return (
     <motion.div
       ref={ref}
@@ -135,30 +155,28 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#115E3E]/5 to-[#A7CE48]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
-      {/* Image Placeholder - Substitua por imagem real quando disponível */}
-      <div className="relative w-full h-48 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 overflow-hidden group-hover:from-gray-100 group-hover:via-gray-150 group-hover:to-gray-250 transition-all duration-300">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center p-4">
-            <div className="relative w-20 h-20 mx-auto mb-3 bg-white/80 rounded-lg flex items-center justify-center shadow-sm">
-              <ImageIcon className="w-10 h-10 text-gray-400" />
+      {/* Product Image */}
+      <div className="relative w-full h-48 overflow-hidden bg-gray-100">
+        {imagePath ? (
+          <Image
+            src={imagePath}
+            alt={`${product.code} - ${product.title}`}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            priority={index < 3}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+            <div className="text-center p-4">
+              <div className="relative w-20 h-20 mx-auto mb-3 bg-white/80 rounded-lg flex items-center justify-center shadow-sm">
+                <ImageIcon className="w-10 h-10 text-gray-400" />
+              </div>
+              <p className="text-xs text-gray-500 font-semibold mb-1">Imagem não disponível</p>
+              <p className="text-xs text-gray-400">{product.code}</p>
             </div>
-            <p className="text-xs text-gray-500 font-semibold mb-1">Imagem do produto</p>
-            <p className="text-xs text-gray-400">{product.code}</p>
           </div>
-        </div>
-        {/* 
-        TODO: Quando tiver as imagens, descomente e ajuste o caminho:
-        Coloque as imagens em: /public/products/liga-metalica/
-        Nome dos arquivos: esn-050.jpg, esn-300.jpg, eda-2010.jpg, etc.
-        
-        <Image
-          src={`/products/liga-metalica/${product.code.toLowerCase().replace(/\s+/g, '-')}.jpg`}
-          alt={`${product.code} - ${product.title}`}
-          fill
-          className="object-cover"
-          priority={index < 3}
-        />
-        */}
+        )}
       </div>
       
       <div className="relative p-6">
@@ -314,7 +332,7 @@ export default function LigaMetalicaPage() {
                     Nossa série ESN é composta por diamantes sintéticos ideais para aplicações de serração e perfuração. 
                     Graças ao baixo e uniforme teor de inclusões metálicas, os cristais apresentam alta estabilidade térmica 
                     e elevada resistência das partículas. Disponível nos tamanhos: 16/18, 18/20, 20/25, 20/30, 25/30, 30/35, 
-                    30/40, 35/40, 35/45, 40/45, 40/50, 45/50, 45/60, 50/60 e 50/70.
+                    30/40, 35/40, 35/45, 40/45, 40/50, 45/50, 45/60, 50/60 e 50/70. Para opções com revestimento, visite também nossa página de "Revestimentos".
                   </p>
                 </div>
               ) : (

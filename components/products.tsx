@@ -108,7 +108,9 @@ const ProductCard = ({ product, index, inView }: any) => {
         />
         
         <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#115E3E] transition-colors">
-          {product?.name ?? ""}
+          {product?.id === "resin-bond" ? "Ligante Resinoide" : 
+           product?.id === "metal-bond" ? "Ligante Metálico" : 
+           product?.name ?? ""}
         </h3>
         <p className="text-sm font-semibold mb-3" style={{ color: borderColor }}>
           {product?.subtitle ?? ""}

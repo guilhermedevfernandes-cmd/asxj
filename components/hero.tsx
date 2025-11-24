@@ -30,11 +30,21 @@ const Hero = () => {
       {/* Background Image with Parallax */}
       <motion.div style={{ y }} className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
+          {/* Desktop Image */}
           <Image
-            src="https://static.abacusaicdn.net/images/5fb595f0-d143-4884-95f7-e0be44361ce1.jpg"
+            src="/herobackground/opcao1_desktop.jpg"
             alt="Moderna instalação de fabricação de abrasivos diamantados"
             fill
-            className="object-cover"
+            className="object-cover hidden md:block"
+            priority
+            sizes="100vw"
+          />
+          {/* Mobile Image */}
+          <Image
+            src="/herobackground/opcao1_mobile.jpg"
+            alt="Moderna instalação de fabricação de abrasivos diamantados"
+            fill
+            className="object-cover md:hidden"
             priority
             sizes="100vw"
           />
