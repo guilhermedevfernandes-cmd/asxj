@@ -16,47 +16,77 @@ interface Product {
   features: string[];
 }
 
-const resinoideProducts: Product[] = [
+const cbnProducts: Product[] = [
   {
-    code: "EDA 2021",
-    title: "EDA 2021",
-    description: "Cristal friável, geralmente imperfeito e irregular, com superfícies ásperas e predominantemente translúcido. Adequado para uma ampla variedade de aplicações, tanto para a retificação úmida quanto seca de carboneto de tungstênio.",
-    strength: "Friável",
-    features: [
-      "Cristal friável",
-      "Superfícies ásperas",
-      "Aplicações econômicas",
-      "Retificação úmida e seca",
-      "Disponível com níquel (30% ou 56%)",
-      "Disponível com cobre (50%)"
-    ]
-  },
-  {
-    code: "EFRD-S",
-    title: "EFRD-S",
-    description: "Nova geração de diamante para uso em rebolos de ligante resinoide e vitrificado. Desenvolvido para alcançar arestas de corte em nível micron, apresentando fraturamento microcontrolado e autocorte, resultando em um cristal autoafiável que gera uma ação de corte livre e alta retenção no ligante.",
-    strength: "Friável",
-    features: [
-      "Nova geração",
-      "Arestas de corte em nível micron",
-      "Fraturamento microcontrolado",
-      "Cristal autoafiável",
-      "Alta retenção no ligante",
-      "Acabamento de superfície premium"
-    ]
-  },
-  {
-    code: "EDA 2023",
-    title: "EDA 2023",
-    description: "Produto desenvolvido para alcançar arestas de corte em nível micron, apresentando fraturamento microcontrolado e autocorte. Cristal autoafiável que gera uma ação de corte livre e alta retenção no ligante, proporcionando longa vida útil, corte rápido e acabamento de superfície premium.",
+    code: "EBN 2000",
+    title: "EBN 2000",
+    description: "Abrasivo CBN (Nitreto de Boro Cúbico) da série EBN, desenvolvido para aplicações de retificação de materiais ferrosos. Oferece excelente desempenho em operações de alta velocidade e alta precisão.",
     strength: "Força intermediária",
     features: [
-      "Arestas de corte em nível micron",
-      "Fraturamento microcontrolado",
-      "Cristal autoafiável",
-      "Alta retenção no ligante",
-      "Corte livre em baixas temperaturas",
-      "Acabamento premium"
+      "Retificação de materiais ferrosos",
+      "Alta velocidade",
+      "Alta precisão",
+      "Excelente desempenho"
+    ]
+  },
+  {
+    code: "EBN 5000",
+    title: "EBN 5000",
+    description: "Abrasivo CBN de alta qualidade da série EBN, ideal para aplicações que exigem acabamento superior e controle dimensional preciso. Desenvolvido para retificação de aços endurecidos e materiais ferrosos.",
+    strength: "Força alta",
+    features: [
+      "Alta qualidade",
+      "Acabamento superior",
+      "Controle dimensional preciso",
+      "Aços endurecidos"
+    ]
+  },
+  {
+    code: "EBN 6000",
+    title: "EBN 6000",
+    description: "Abrasivo CBN de alto desempenho da série EBN, oferecendo excelente vida útil e consistência em operações de retificação. Ideal para aplicações que exigem alta produtividade e qualidade.",
+    strength: "Força alta",
+    features: [
+      "Alto desempenho",
+      "Excelente vida útil",
+      "Alta produtividade",
+      "Consistência"
+    ]
+  },
+  {
+    code: "EBN 8000",
+    title: "EBN 8000",
+    description: "Abrasivo CBN premium da série EBN, representando o mais alto nível de qualidade e desempenho. Desenvolvido para aplicações mais exigentes que requerem máxima precisão e acabamento especular.",
+    strength: "Força extremamente alta",
+    features: [
+      "Qualidade premium",
+      "Máxima precisão",
+      "Acabamento especular",
+      "Aplicações exigentes"
+    ]
+  },
+  {
+    code: "EBN A",
+    title: "EBN A",
+    description: "Abrasivo CBN da série EBN tipo A, desenvolvido para aplicações gerais de retificação. Oferece bom equilíbrio entre desempenho e custo-benefício para uma ampla variedade de aplicações.",
+    strength: "Força intermediária",
+    features: [
+      "Aplicações gerais",
+      "Bom custo-benefício",
+      "Versatilidade",
+      "Ampla variedade de aplicações"
+    ]
+  },
+  {
+    code: "EBN AA",
+    title: "EBN AA",
+    description: "Abrasivo CBN de alta qualidade da série EBN tipo AA, oferecendo excelente desempenho em retificação de precisão. Ideal para aplicações que exigem acabamento superior e tolerâncias apertadas.",
+    strength: "Força alta",
+    features: [
+      "Alta qualidade",
+      "Retificação de precisão",
+      "Acabamento superior",
+      "Tolerâncias apertadas"
     ]
   }
 ];
@@ -77,10 +107,18 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
   const getStrengthColor = (strength: string) => {
     if (strength.includes("extremamente")) return "bg-red-100 text-red-800 border-red-300";
     if (strength.includes("alta") && !strength.includes("extremamente")) return "bg-orange-100 text-orange-800 border-orange-300";
-    if (strength.includes("intermediária") || strength.includes("intermediaria")) return "bg-blue-100 text-blue-800 border-blue-300";
-    if (strength.includes("Friável") || strength.includes("Friavel")) return "bg-purple-100 text-purple-800 border-purple-300";
-    return "bg-gray-100 text-gray-800 border-gray-300";
+    return "bg-blue-100 text-blue-800 border-blue-300";
   };
+
+  // Determina o caminho da imagem baseado no código do produto
+  const getImagePath = (code: string) => {
+    if (code.startsWith("EBN")) {
+      return `/CBN/${code}.png`;
+    }
+    return null;
+  };
+
+  const imagePath = getImagePath(product.code);
 
   return (
     <motion.div
@@ -92,30 +130,28 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF]/5 to-[#60A5FA]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
-      {/* Image Placeholder - Substitua por imagem real quando disponível */}
-      <div className="relative w-full h-48 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 overflow-hidden group-hover:from-gray-100 group-hover:via-gray-150 group-hover:to-gray-250 transition-all duration-300">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center p-4">
-            <div className="relative w-20 h-20 mx-auto mb-3 bg-white/80 rounded-lg flex items-center justify-center shadow-sm">
-              <ImageIcon className="w-10 h-10 text-gray-400" />
+      {/* Product Image */}
+      <div className="relative w-full h-48 overflow-hidden bg-gray-100">
+        {imagePath ? (
+          <Image
+            src={imagePath}
+            alt={`${product.code} - ${product.title}`}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            priority={index < 3}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+            <div className="text-center p-4">
+              <div className="relative w-20 h-20 mx-auto mb-3 bg-white/80 rounded-lg flex items-center justify-center shadow-sm">
+                <ImageIcon className="w-10 h-10 text-gray-400" />
+              </div>
+              <p className="text-xs text-gray-500 font-semibold mb-1">Imagem não disponível</p>
+              <p className="text-xs text-gray-400">{product.code}</p>
             </div>
-            <p className="text-xs text-gray-500 font-semibold mb-1">Imagem do produto</p>
-            <p className="text-xs text-gray-400">{product.code}</p>
           </div>
-        </div>
-        {/* 
-        TODO: Quando tiver as imagens, descomente e ajuste o caminho:
-        Coloque as imagens em: /public/products/liga-resinoide/
-        Nome dos arquivos: eda-2021.jpg, efrd-s.jpg, eda-2023.jpg
-        
-        <Image
-          src={`/products/liga-resinoide/${product.code.toLowerCase().replace(/\s+/g, '-').replace('/', '-')}.jpg`}
-          alt={`${product.code} - ${product.title}`}
-          fill
-          className="object-cover"
-          priority={index < 3}
-        />
-        */}
+        )}
       </div>
       
       <div className="relative p-6">
@@ -165,7 +201,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
   );
 };
 
-export default function LigaResinoidePage() {
+export default function CBNBorazonPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -192,23 +228,23 @@ export default function LigaResinoidePage() {
             className="text-center text-white"
           >
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-              Liga Resinoide
+              CBN - Borazon
             </h1>
             <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Diamantes para rebolos de ligante resinoide e aplicações de retificação de metais não ferrosos
+              Nitreto de Boro Cúbico (CBN) para retificação de materiais ferrosos e aplicações de alta precisão
             </p>
             <div className="flex items-center justify-center gap-4 text-sm text-gray-300 flex-wrap">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5" />
-                <span>Estrutura mosaico multicristalina</span>
+                <span>Alta estabilidade térmica</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="w-5 h-5" />
-                <span>Corte rápido e longa vida útil</span>
+                <span>Excelente para materiais ferrosos</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-5 h-5" />
-                <span>Superfície áspera e formato uniforme</span>
+                <span>Alta precisão e acabamento</span>
               </div>
             </div>
           </motion.div>
@@ -226,16 +262,19 @@ export default function LigaResinoidePage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Liga Resinoide - Excelência em Retificação
+              CBN - Borazon - Excelência em Retificação de Materiais Ferrosos
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              A linha de ligante resinoide é utilizada em rebolos de diamante resinoide e em uma ampla gama de aplicações 
-              de retificação de metais não ferrosos. Todos os produtos apresentam uma estrutura mosaico multicristalina, 
-              superfície áspera e formato uniforme.
+              O Nitreto de Boro Cúbico (CBN), também conhecido como Borazon, é um superabrasivo sintético 
+              especialmente desenvolvido para a retificação de materiais ferrosos. Com dureza superior ao 
+              diamante em aplicações com aços e ligas ferrosas, o CBN oferece excelente desempenho em 
+              operações de alta velocidade e alta precisão.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              As bordas afiadas geradas durante o corte, a retificação, o lapidamento e o acabamento oferecem características 
-              únicas e consistentes, resultando em um produto de longa vida útil e corte rápido em toda a nossa linha.
+              Nossa linha de produtos CBN (série EBN) é desenvolvida para oferecer o melhor desempenho em 
+              cada tipo de aplicação, desde retificação de precisão até operações de alta produtividade. 
+              Os abrasivos CBN são ideais para retificação de aços endurecidos, aços rápidos, aços ferramenta 
+              e outras ligas ferrosas que exigem acabamento superior e controle dimensional preciso.
             </p>
           </motion.div>
         </div>
@@ -250,7 +289,7 @@ export default function LigaResinoidePage() {
             transition={{ duration: 0.3 }}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {resinoideProducts.map((product, index) => (
+            {cbnProducts.map((product, index) => (
               <ProductCard key={product.code} product={product} index={index} />
             ))}
           </motion.div>
@@ -272,27 +311,46 @@ export default function LigaResinoidePage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Tamanhos Disponíveis</h3>
-                <p className="text-gray-700 mb-2">
-                  Nossa linha EDA ligante resinoide está disponível nos tamanhos:
-                </p>
-                <p className="text-gray-600">
-                  50/60, 60/70, 70/80, 80/100, 100/120, 120/140, 140/170, 170/200, 200/230, 
-                  230/270, 270/325, 325/400 e 400/500.
-                </p>
-                <p className="text-gray-600 mt-2">
-                  Versão micras: 20-40, 15-25, 10-20, 4-8.
-                </p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Aplicações Principais</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Retificação de aços endurecidos
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Retificação de aços rápidos e aços ferramenta
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Retificação de precisão de componentes automotivos
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Operações de alta velocidade e alta produtividade
+                  </li>
+                </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Revestimentos</h3>
-                <p className="text-gray-700 mb-2">
-                  Revestimento tradicional em níquel disponível em 30%, 56%, 60% ou em qualquer outra 
-                  porcentagem personalizada, conforme a necessidade do cliente.
-                </p>
-                <p className="text-gray-600">
-                  Consulte a página de "revestimentos" para informações adicionais e demais tipos de revestimento.
-                </p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vantagens do CBN</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Dureza superior ao diamante em materiais ferrosos
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Alta estabilidade térmica e química
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Excelente vida útil e consistência
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+                    Acabamento superior e controle dimensional preciso
+                  </li>
+                </ul>
               </div>
             </div>
           </motion.div>

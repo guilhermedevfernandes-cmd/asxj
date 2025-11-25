@@ -11,19 +11,19 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 156 70% 22%;
+    --primary: 217 91% 40%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 81 42% 50%;
+    --secondary: 213 93% 68%;
     --secondary-foreground: 0 0% 9%;
     --muted: 0 0% 96.1%;
     --muted-foreground: 0 0% 45.1%;
-    --accent: 74 61% 55%;
+    --accent: 217 91% 60%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 0 0% 89.8%;
     --input: 0 0% 89.8%;
-    --ring: 156 70% 22%;
+    --ring: 217 91% 40%;
     --radius: 0.5rem;
   }
 }
@@ -52,12 +52,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #A7CE48 0%, #115E3E 100%);
+  background: linear-gradient(180deg, #60A5FA 0%, #1E40AF 100%);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #678746 0%, #115E3E 100%);
+  background: linear-gradient(180deg, #3B82F6 0%, #1E40AF 100%);
 }
 
 @layer utilities {
@@ -109,10 +109,10 @@ html {
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(167, 206, 72, 0.3);
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(167, 206, 72, 0.6);
+    box-shadow: 0 0 40px rgba(96, 165, 250, 0.6);
   }
 }
 

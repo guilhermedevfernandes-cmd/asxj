@@ -68,6 +68,45 @@ const esnProducts: Product[] = [
   }
 ];
 
+const mbProducts: Product[] = [
+  {
+    code: "MB 200 - UM",
+    title: "MB 200 - UM",
+    description: "Abrasivo de granulometria micrométrica da série MB, desenvolvido para aplicações que exigem precisão e acabamento de superfície de alta qualidade. Ideal para processos de polimento e lapidação em materiais diversos.",
+    strength: "Granulometria micrométrica",
+    features: [
+      "Granulometria controlada",
+      "Alta precisão",
+      "Acabamento de superfície superior",
+      "Aplicações diversas"
+    ]
+  },
+  {
+    code: "MB 300 - UM",
+    title: "MB 300 - UM",
+    description: "Abrasivo de granulometria micrométrica da série MB, oferecendo excelente desempenho em operações de polimento e acabamento. Desenvolvido para aplicações que requerem controle dimensional preciso e superfícies livres de defeitos.",
+    strength: "Granulometria micrométrica",
+    features: [
+      "Granulometria controlada",
+      "Alta precisão",
+      "Acabamento de superfície superior",
+      "Aplicações diversas"
+    ]
+  },
+  {
+    code: "MB 400 – UM",
+    title: "MB 400 – UM",
+    description: "Abrasivo de granulometria micrométrica da série MB, representando o mais alto nível de refinamento para operações de polimento e lapidação. Ideal para aplicações que exigem acabamentos especulares e tolerâncias dimensionais extremamente apertadas.",
+    strength: "Granulometria micrométrica",
+    features: [
+      "Granulometria controlada",
+      "Alta precisão",
+      "Acabamento de superfície superior",
+      "Aplicações diversas"
+    ]
+  }
+];
+
 const edaProducts: Product[] = [
   {
     code: "EDA 2010",
@@ -125,6 +164,13 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     triggerOnce: true,
     threshold: 0.1,
   });
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  const MAX_DESCRIPTION_LENGTH = 150;
+  const shouldTruncate = product.description.length > MAX_DESCRIPTION_LENGTH;
+  const truncatedDescription = shouldTruncate 
+    ? product.description.substring(0, MAX_DESCRIPTION_LENGTH) + "..."
+    : product.description;
 
   const getStrengthColor = (strength: string) => {
     if (strength.includes("extremamente")) return "bg-red-100 text-red-800 border-red-300";
@@ -139,6 +185,8 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       return `/ESN/${code}.png`;
     } else if (code.startsWith("EDA")) {
       return `/EDA/${code}.png`;
+    } else if (code.startsWith("MB")) {
+      return `/MB/${code}.png`;
     }
     return null;
   };
@@ -153,7 +201,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#115E3E]/5 to-[#A7CE48]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF]/5 to-[#60A5FA]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
       {/* Product Image */}
       <div className="relative w-full h-48 overflow-hidden bg-gray-100">
@@ -187,24 +235,36 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
               {product.strength}
             </span>
           </div>
-          <div className="p-3 bg-[#115E3E]/10 rounded-lg group-hover:bg-[#115E3E] transition-colors duration-300">
-            <Sparkles className="w-6 h-6 text-[#115E3E] group-hover:text-white transition-colors duration-300" />
+          <div className="p-3 bg-[#1E40AF]/10 rounded-lg group-hover:bg-[#1E40AF] transition-colors duration-300">
+            <Sparkles className="w-6 h-6 text-[#1E40AF] group-hover:text-white transition-colors duration-300" />
           </div>
         </div>
 
-        <p className="text-gray-600 mb-4 leading-relaxed">{product.description}</p>
+        <div className="mb-4">
+          <p className="text-gray-600 leading-relaxed">
+            {isExpanded ? product.description : truncatedDescription}
+          </p>
+          {shouldTruncate && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="mt-2 text-sm font-medium text-[#1E40AF] hover:text-[#1E3A8A] transition-colors"
+            >
+              {isExpanded ? "Ler menos" : "Ler mais"}
+            </button>
+          )}
+        </div>
 
         <div className="space-y-2 mb-4">
           {product.features.map((feature, idx) => (
             <div key={idx} className="flex items-center text-sm text-gray-700">
-              <div className="w-1.5 h-1.5 bg-[#A7CE48] rounded-full mr-2" />
+              <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
               {feature}
             </div>
           ))}
         </div>
 
         <div className="pt-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#115E3E] text-white rounded-lg hover:bg-[#0d4a2f] transition-colors duration-300 font-medium group">
+          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#1E40AF] text-white rounded-lg hover:bg-[#1E3A8A] transition-colors duration-300 font-medium group">
             Solicitar Orçamento
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
@@ -215,20 +275,20 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
 };
 
 export default function LigaMetalicaPage() {
-  const [selectedSeries, setSelectedSeries] = useState<"ESN" | "EDA">("ESN");
+  const [selectedSeries, setSelectedSeries] = useState<"ESN" | "EDA" | "MB">("ESN");
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
-  const currentProducts = selectedSeries === "ESN" ? esnProducts : edaProducts;
+  const currentProducts = selectedSeries === "ESN" ? esnProducts : selectedSeries === "EDA" ? edaProducts : mbProducts;
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#115E3E] via-[#0d4a2f] to-[#115E3E] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#1E40AF] via-[#1E3A8A] to-[#1E40AF] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -282,7 +342,7 @@ export default function LigaMetalicaPage() {
                 onClick={() => setSelectedSeries("ESN")}
                 className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
                   selectedSeries === "ESN"
-                    ? "bg-[#115E3E] text-white shadow-lg scale-105"
+                    ? "bg-[#1E40AF] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -296,7 +356,7 @@ export default function LigaMetalicaPage() {
                 onClick={() => setSelectedSeries("EDA")}
                 className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
                   selectedSeries === "EDA"
-                    ? "bg-[#115E3E] text-white shadow-lg scale-105"
+                    ? "bg-[#1E40AF] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -305,6 +365,20 @@ export default function LigaMetalicaPage() {
                   <span>Série EDA</span>
                 </div>
                 <p className="text-xs mt-1 opacity-80">Para ligantes metálicos e eletrolíticos</p>
+              </button>
+              <button
+                onClick={() => setSelectedSeries("MB")}
+                className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                  selectedSeries === "MB"
+                    ? "bg-[#1E40AF] text-white shadow-lg scale-105"
+                    : "text-gray-600 hover:text-gray-900"
+                }`}
+              >
+                <div className="flex items-center justify-center gap-2">
+                  <Shield className="w-5 h-5" />
+                  <span>Série MB</span>
+                </div>
+                <p className="text-xs mt-1 opacity-80">Abrasivos de Granulometria Micrométrica</p>
               </button>
             </div>
           </motion.div>
@@ -335,7 +409,7 @@ export default function LigaMetalicaPage() {
                     30/40, 35/40, 35/45, 40/45, 40/50, 45/50, 45/60, 50/60 e 50/70. Para opções com revestimento, visite também nossa página de "Revestimentos".
                   </p>
                 </div>
-              ) : (
+              ) : selectedSeries === "EDA" ? (
                 <div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">
                     Série EDA - Diamantes para Ligantes Metálicos e Eletrolíticos
@@ -345,6 +419,15 @@ export default function LigaMetalicaPage() {
                     Utilizados na usinagem de materiais não ferrosos, os produtos da EID foram criados para oferecer o melhor 
                     desempenho em cada tipo de aplicação. Disponível nos tamanhos: 60/70, 70/80, 80/100, 100/120, 120/140, 
                     140/170, 170/200, 200/230, 270/325, 325/400 e 400/500.
+                  </p>
+                </div>
+              ) : (
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Série MB - Abrasivos de Granulometria Micrométrica
+                  </h2>
+                  <p className="text-lg text-gray-700 leading-relaxed">
+                    A série MB é composta por abrasivos de granulometria micrométrica desenvolvidos para aplicações que exigem precisão extrema e acabamento de superfície de alta qualidade. Estes produtos são ideais para processos de polimento, lapidação e acabamento em diversos materiais, oferecendo controle dimensional preciso e superfícies livres de defeitos.
                   </p>
                 </div>
               )}
@@ -363,7 +446,7 @@ export default function LigaMetalicaPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             >
               {currentProducts.map((product, index) => (
                 <ProductCard key={product.code} product={product} index={index} />
@@ -374,7 +457,7 @@ export default function LigaMetalicaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#115E3E] to-[#0d4a2f]">
+      <section className="py-20 bg-gradient-to-br from-[#1E40AF] to-[#1E3A8A]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -391,7 +474,7 @@ export default function LigaMetalicaPage() {
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#A7CE48] text-[#115E3E] font-semibold rounded-lg hover:bg-[#8fb83a] transition-colors duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#60A5FA] text-[#1E40AF] font-semibold rounded-lg hover:bg-[#8fb83a] transition-colors duration-300 shadow-lg"
             >
               Fale Conosco
               <ArrowRight className="w-5 h-5" />

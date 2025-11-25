@@ -12,6 +12,7 @@ import contentData from "@/public/asasj_content.json";
 const productLinks: Record<string, string> = {
   "resin-bond": "/liga-resinoide",
   "metal-bond": "/liga-metalica",
+  "borazon": "/cbn-borazon",
 };
 
 const Products = () => {
@@ -33,12 +34,12 @@ const Products = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Nossos <span className="text-[#115E3E]">Produtos</span>
+            Nossos <span className="text-[#1E40AF]">Produtos</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Soluções completas em abrasivos industriais para todas as suas necessidades
           </p>
-          <div className="w-24 h-1 bg-[#A7CE48] mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-[#60A5FA] mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -61,7 +62,7 @@ const ProductCard = ({ product, index, inView }: any) => {
   const hasLink = !!productLink;
 
   // Cores alternadas para as bordas
-  const borderColors = ["#A7CE48", "#1CA653", "#678746", "#FECD28", "#F58434"];
+  const borderColors = ["#60A5FA", "#3B82F6", "#3B82F6", "#FECD28", "#F58434"];
   const borderColor = borderColors[index % borderColors.length];
 
   return (
@@ -107,9 +108,10 @@ const ProductCard = ({ product, index, inView }: any) => {
           style={{ backgroundColor: borderColor }}
         />
         
-        <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#115E3E] transition-colors">
+        <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#1E40AF] transition-colors">
           {product?.id === "resin-bond" ? "Ligante Resinoide" : 
            product?.id === "metal-bond" ? "Ligante Metálico" : 
+           product?.id === "borazon" ? "CBN - Borazon" :
            product?.name ?? ""}
         </h3>
         <p className="text-sm font-semibold mb-3" style={{ color: borderColor }}>

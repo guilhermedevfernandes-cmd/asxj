@@ -25,7 +25,7 @@ const Differentials = () => {
   const differentials = contentData?.companyInfo?.differentials ?? [];
 
   return (
-    <section id="diferenciais" className="py-20 bg-gradient-to-br from-[#115E3E] to-[#678746]">
+    <section id="diferenciais" className="py-20 bg-gradient-to-br from-[#1E40AF] to-[#3B82F6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           ref={ref}
@@ -60,7 +60,7 @@ const Differentials = () => {
                 {/* Glass Morphism Card */}
                 <div className="relative bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 h-full overflow-hidden">
                   {/* Gradient Glow on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#A7CE48]/0 via-[#FECD28]/0 to-[#F58434]/0 group-hover:from-[#A7CE48]/10 group-hover:via-[#FECD28]/5 group-hover:to-[#F58434]/10 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#60A5FA]/0 via-[#FECD28]/0 to-[#F58434]/0 group-hover:from-[#60A5FA]/10 group-hover:via-[#FECD28]/5 group-hover:to-[#F58434]/10 transition-all duration-500" />
                   
                   {/* Content */}
                   <div className="relative z-10 flex items-start gap-4">
@@ -69,7 +69,7 @@ const Differentials = () => {
                       transition={{ duration: 0.6 }}
                       className="p-3 bg-[#FECD28] rounded-lg shadow-lg"
                     >
-                      <IconComponent className="w-8 h-8 text-[#115E3E]" />
+                      <IconComponent className="w-8 h-8 text-[#1E40AF]" />
                     </motion.div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-3">

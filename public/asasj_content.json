@@ -93,31 +93,13 @@
       ]
     },
     {
-      "id": "micron",
-      "name": "Micron",
-      "subtitle": "Abrasivos de Granulometria Micrométrica",
-      "shortDesc": "Pós abrasivos ultrafinos com granulometria micrométrica controlada, essenciais para processos de polimento, lapidação e acabamento de superfície de altíssima qualidade.",
-      "fullDesc": "Os abrasivos de granulometria micrométrica (Micron) representam o mais alto nível de refinamento em materiais abrasivos, oferecendo pós de diamante e CBN com distribuição granulométrica rigorosamente controlada na faixa micrométrica e submicrométrica. Produzidos através de processos avançados de classificação e seleção, estes abrasivos ultrafinos são fundamentais para operações que exigem acabamentos especulares, tolerâncias dimensionais extremamente apertadas e superfícies livres de defeitos. Disponíveis em diversas faixas granulométricas desde 0,25 até 90 mícrons, nossos pós micronizados são aplicados em suspensões, pastas abrasivas e compostos de polimento para as mais variadas indústrias, desde a ótica de precisão até semicondutores. A AS&ASJ oferece pós Micron com certificação de qualidade e rastreabilidade completa da granulometria.",
-      "applications": [
-        "Polimento óptico de lentes e prismas de alta precisão",
-        "Lapidação de wafers de silício para semicondutores",
-        "Acabamento superficial de moldes e matrizes",
-        "Polimento de gemas e joias",
-        "Preparação metalográfica de amostras para análise",
-        "Acabamento de superfícies de vedação de alta performance",
-        "Polimento de componentes de rolamentos de precisão",
-        "Superacabamento de superfícies críticas em aplicações aeroespaciais"
-      ],
-      "benefits": [
-        "Acabamento superficial especular com rugosidade nanométrica",
-        "Distribuição granulométrica rigorosamente controlada",
-        "Remoção de material uniforme e controlada",
-        "Superfícies livres de riscos e defeitos microscópicos",
-        "Compatibilidade com diversos veículos e ligantes",
-        "Rastreabilidade e certificação de qualidade garantidas",
-        "Eficiência em operações de polimento e lapidação",
-        "Versatilidade para aplicações em múltiplas indústrias"
-      ]
+      "id": "borazon",
+      "name": "Borazon",
+      "subtitle": "",
+      "shortDesc": "",
+      "fullDesc": "",
+      "applications": [],
+      "benefits": []
     },
     {
       "id": "natural",

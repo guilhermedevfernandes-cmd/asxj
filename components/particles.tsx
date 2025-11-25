@@ -53,7 +53,7 @@ export default function Particles() {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = `rgba(167, 206, 72, ${this.opacity})`; // #A7CE48
+        ctx.fillStyle = `rgba(96, 165, 250, ${this.opacity})`; // #60A5FA
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -79,7 +79,7 @@ export default function Particles() {
 
           if (distance < 120) {
             const opacity = (1 - distance / 120) * 0.3;
-            ctx.strokeStyle = `rgba(167, 206, 72, ${opacity})`;
+            ctx.strokeStyle = `rgba(96, 165, 250, ${opacity})`;
             ctx.lineWidth = 1;
             ctx.beginPath();
             ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
