@@ -73,12 +73,12 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
-            Entre em <span className="text-[#1E40AF]">Contato</span>
+            Entre em <span className="text-[#15297c]">Contato</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Estamos prontos para atender suas necessidades e fornecer as melhores soluções
           </p>
-          <div className="w-24 h-1 bg-[#60A5FA] mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-[#15297c] mx-auto rounded-full" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -100,32 +100,32 @@ const Contact = () => {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-[#1E40AF]/10 rounded-lg">
-                  <Phone className="w-6 h-6 text-[#1E40AF]" />
+                <div className="p-3 bg-[#15297c]/10 rounded-lg">
+                  <Phone className="w-6 h-6 text-[#15297c]" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Telefone</h4>
-                  <a href="tel:+5599999999998" className="text-gray-700 hover:text-[#1E40AF]">
+                  <a href="tel:+5599999999998" className="text-gray-700 hover:text-[#15297c]">
                     (99) 9999-9998
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-[#3B82F6]/10 rounded-lg">
-                  <Mail className="w-6 h-6 text-[#3B82F6]" />
+                <div className="p-3 bg-[#15297c]/10 rounded-lg">
+                  <Mail className="w-6 h-6 text-[#15297c]" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">E-mail</h4>
-                  <a href="mailto:contato@asasj.com.br" className="text-gray-700 hover:text-[#1E40AF]">
+                  <a href="mailto:contato@asasj.com.br" className="text-gray-700 hover:text-[#15297c]">
                     contato@asasj.com.br
                   </a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4 bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow">
-                <div className="p-3 bg-[#60A5FA]/10 rounded-lg">
-                  <MapPin className="w-6 h-6 text-[#3B82F6]" />
+                <div className="p-3 bg-[#15297c]/10 rounded-lg">
+                  <MapPin className="w-6 h-6 text-[#15297c]" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Localização</h4>
@@ -136,7 +136,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-[#1E40AF] to-[#3B82F6] rounded-xl p-8 text-white">
+            <div className="bg-gradient-to-br from-[#15297c] to-[#15297c] rounded-xl p-8 text-white">
               <h4 className="text-xl font-bold mb-3">Horário de Atendimento</h4>
               <p className="text-gray-100">
                 Segunda a Sexta: 8h às 18h<br />
@@ -163,7 +163,7 @@ const Contact = () => {
                   required
                   value={formData?.name ?? ""}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15297c] focus:border-transparent transition-all"
                   placeholder="Seu nome"
                 />
               </div>
@@ -179,7 +179,7 @@ const Contact = () => {
                   required
                   value={formData?.email ?? ""}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15297c] focus:border-transparent transition-all"
                   placeholder="seu@email.com"
                 />
               </div>
@@ -195,7 +195,7 @@ const Contact = () => {
                     name="phone"
                     value={formData?.phone ?? ""}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15297c] focus:border-transparent transition-all"
                     placeholder="(00) 00000-0000"
                   />
                 </div>
@@ -210,7 +210,7 @@ const Contact = () => {
                     name="company"
                     value={formData?.company ?? ""}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15297c] focus:border-transparent transition-all"
                     placeholder="Nome da empresa"
                   />
                 </div>
@@ -227,7 +227,7 @@ const Contact = () => {
                   rows={5}
                   value={formData?.message ?? ""}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1E40AF] focus:border-transparent transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#15297c] focus:border-transparent transition-all resize-none"
                   placeholder="Descreva sua necessidade ou dúvida..."
                 />
               </div>
@@ -235,7 +235,7 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#1E40AF] hover:bg-[#3B82F6] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full inline-flex items-center justify-center gap-2 bg-[#15297c] hover:bg-[#0f1f5a] text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
               >
                 {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                 <Send className="w-5 h-5" />

@@ -16,77 +16,44 @@ interface Product {
   features: string[];
 }
 
-const cbnProducts: Product[] = [
+const naturalDiamondProducts: Product[] = [
   {
-    code: "EBN 2000",
-    title: "EBN 2000",
-    description: "Abrasivo CBN (Nitreto de Boro Cúbico) da série EBN, desenvolvido para aplicações de retificação de materiais ferrosos. Oferece excelente desempenho em operações de alta velocidade e alta precisão.",
-    strength: "Força intermediária",
-    features: [
-      "Retificação de materiais ferrosos",
-      "Alta velocidade",
-      "Alta precisão",
-      "Excelente desempenho"
-    ]
-  },
-  {
-    code: "EBN 5000",
-    title: "EBN 5000",
-    description: "Abrasivo CBN de alta qualidade da série EBN, ideal para aplicações que exigem acabamento superior e controle dimensional preciso. Desenvolvido para retificação de aços endurecidos e materiais ferrosos.",
+    code: "NS-1-P",
+    title: "NS-1-P",
+    description: "Diamante natural de alta qualidade, selecionado criteriosamente para aplicações industriais que exigem características únicas de tenacidade e forma cristalina. Ideal para ferramentas de dressagem e aplicações especiais.",
     strength: "Força alta",
     features: [
       "Alta qualidade",
-      "Acabamento superior",
-      "Controle dimensional preciso",
-      "Aços endurecidos"
+      "Tenacidade excepcional",
+      "Forma cristalina única",
+      "Aplicações industriais",
+      "Dressagem de rebolos"
     ]
   },
   {
-    code: "EBN 6000",
-    title: "EBN 6000",
-    description: "Abrasivo CBN de alto desempenho da série EBN, oferecendo excelente vida útil e consistência em operações de retificação. Ideal para aplicações que exigem alta produtividade e qualidade.",
+    code: "NS-1-S",
+    title: "NS-1-S",
+    description: "Diamante natural selecionado, caracterizado por excelente estabilidade térmica e propriedades cristalográficas superiores. Desenvolvido para aplicações que requerem máxima precisão e confiabilidade.",
     strength: "Força alta",
     features: [
-      "Alto desempenho",
-      "Excelente vida útil",
-      "Alta produtividade",
-      "Consistência"
+      "Estabilidade térmica superior",
+      "Propriedades cristalográficas únicas",
+      "Máxima precisão",
+      "Alta confiabilidade",
+      "Aplicações críticas"
     ]
   },
   {
-    code: "EBN 8000",
-    title: "EBN 8000",
-    description: "Abrasivo CBN premium da série EBN, representando o mais alto nível de qualidade e desempenho. Desenvolvido para aplicações mais exigentes que requerem máxima precisão e acabamento especular.",
+    code: "NS-100-P",
+    title: "NS-100-P",
+    description: "Diamante natural premium da série NS, representando o mais alto nível de qualidade e desempenho. Caracterizado por cristais bem formados, livres de inclusões e com propriedades térmicas excepcionais.",
     strength: "Força extremamente alta",
     features: [
       "Qualidade premium",
-      "Máxima precisão",
-      "Acabamento especular",
-      "Aplicações exigentes"
-    ]
-  },
-  {
-    code: "EBN A",
-    title: "EBN A",
-    description: "Abrasivo CBN da série EBN tipo A, desenvolvido para aplicações gerais de retificação. Oferece bom equilíbrio entre desempenho e custo-benefício para uma ampla variedade de aplicações.",
-    strength: "Força intermediária",
-    features: [
-      "Aplicações gerais",
-      "Bom custo-benefício",
-      "Versatilidade",
-      "Ampla variedade de aplicações"
-    ]
-  },
-  {
-    code: "EBN AA",
-    title: "EBN AA",
-    description: "Abrasivo CBN de alta qualidade da série EBN tipo AA, oferecendo excelente desempenho em retificação de precisão. Ideal para aplicações que exigem acabamento superior e tolerâncias apertadas.",
-    strength: "Força alta",
-    features: [
-      "Alta qualidade",
-      "Retificação de precisão",
-      "Acabamento superior",
-      "Tolerâncias apertadas"
+      "Cristais bem formados",
+      "Livres de inclusões",
+      "Propriedades térmicas excepcionais",
+      "Aplicações de alta tecnologia"
     ]
   }
 ];
@@ -112,8 +79,8 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
 
   // Determina o caminho da imagem baseado no código do produto
   const getImagePath = (code: string) => {
-    if (code.startsWith("EBN")) {
-      return `/CBN/${code}.png`;
+    if (code.startsWith("NS")) {
+      return `/Diamante Naturais/${code}.png`;
     }
     return null;
   };
@@ -191,7 +158,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         </div>
 
         <div className="pt-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group">
+          <button className="w-full flex items-center justify-center gap-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group">
             Solicitar Orçamento
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
@@ -201,7 +168,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
   );
 };
 
-export default function CBNBorazonPage() {
+export default function DiamanteNaturaisPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -228,10 +195,10 @@ export default function CBNBorazonPage() {
             className="text-center text-white"
           >
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-              CBN - Borazon
+              Diamante Naturais
             </h1>
             <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Nitreto de Boro Cúbico (CBN) para retificação de materiais ferrosos e aplicações de alta precisão
+              Diamantes naturais selecionados para aplicações industriais que exigem características únicas de tenacidade, forma cristalina e propriedades térmicas superiores
             </p>
             <div className="flex items-center justify-center gap-4 text-sm text-gray-300 flex-wrap">
               <div className="flex items-center gap-2">
@@ -240,11 +207,11 @@ export default function CBNBorazonPage() {
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="w-5 h-5" />
-                <span>Excelente para materiais ferrosos</span>
+                <span>Tenacidade excepcional</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-5 h-5" />
-                <span>Alta precisão e acabamento</span>
+                <span>Propriedades cristalográficas únicas</span>
               </div>
             </div>
           </motion.div>
@@ -262,19 +229,13 @@ export default function CBNBorazonPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              CBN - Borazon - Excelência em Retificação de Materiais Ferrosos
+              Diamante Naturais - Excelência em Qualidade Natural
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              O Nitreto de Boro Cúbico (CBN), também conhecido como Borazon, é um superabrasivo sintético 
-              especialmente desenvolvido para a retificação de materiais ferrosos. Com dureza superior ao 
-              diamante em aplicações com aços e ligas ferrosas, o CBN oferece excelente desempenho em 
-              operações de alta velocidade e alta precisão.
+              Os diamantes naturais compreendem diamantes de origem geológica, criteriosamente selecionados e classificados para aplicações industriais específicas que se beneficiam das características únicas dos cristais naturais. Formados sob condições extremas de pressão e temperatura no interior da Terra ao longo de bilhões de anos, os diamantes naturais apresentam propriedades cristalográficas, térmicas e mecânicas distintas que os tornam insubstituíveis em determinadas aplicações críticas.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Nossa linha de produtos CBN (série EBN) é desenvolvida para oferecer o melhor desempenho em 
-              cada tipo de aplicação, desde retificação de precisão até operações de alta produtividade. 
-              Os abrasivos CBN são ideais para retificação de aços endurecidos, aços rápidos, aços ferramenta 
-              e outras ligas ferrosas que exigem acabamento superior e controle dimensional preciso.
+              Nossa seleção inclui diamantes naturais em diversas classes de qualidade, formas cristalinas e faixas granulométricas, desde pedras de dressagem monocristalinas até pós de diamante natural para aplicações especiais. A AS&ASJ mantém parcerias com fornecedores internacionais certificados, garantindo procedência, qualidade e conformidade com regulamentações internacionais para diamantes de uso industrial.
             </p>
           </motion.div>
         </div>
@@ -287,9 +248,9 @@ export default function CBNBorazonPage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {cbnProducts.map((product, index) => (
+            {naturalDiamondProducts.map((product, index) => (
               <ProductCard key={product.code} product={product} index={index} />
             ))}
           </motion.div>
@@ -315,40 +276,40 @@ export default function CBNBorazonPage() {
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Retificação de aços endurecidos
+                    Dressagem de rebolos de retificação convencionais
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Retificação de aços rápidos e aços ferramenta
+                    Ferramentas especiais de corte para materiais não-metálicos
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Retificação de precisão de componentes automotivos
+                    Aplicações que exigem alta condutividade térmica
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Operações de alta velocidade e alta produtividade
+                    Processos onde a tenacidade do cristal é crítica
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vantagens do CBN</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vantagens dos Diamantes Naturais</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Dureza superior ao diamante em materiais ferrosos
+                    Propriedades cristalográficas únicas e superiores
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Alta estabilidade térmica e química
+                    Alta condutividade térmica natural
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Excelente vida útil e consistência
+                    Tenacidade excepcional dos cristais naturais
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Acabamento superior e controle dimensional preciso
+                    Estabilidade térmica em altas temperaturas
                   </li>
                 </ul>
               </div>

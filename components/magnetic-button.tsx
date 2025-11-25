@@ -42,7 +42,7 @@ export default function MagneticButton({ children, className = '', onClick, styl
     >
       <span className="relative z-10">{children}</span>
       <motion.span
-        className="absolute inset-0 bg-gradient-to-r from-[#60A5FA] to-[#3B82F6] opacity-0"
+        className="absolute inset-0 bg-gradient-to-r from-[#15297c] to-[#15297c] opacity-0"
         initial={{ scale: 0, opacity: 0 }}
         whileHover={{ scale: 1, opacity: 0.2 }}
         transition={{ duration: 0.3 }}

@@ -53,7 +53,7 @@ export default function Particles() {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = `rgba(96, 165, 250, ${this.opacity})`; // #60A5FA
+        ctx.fillStyle = `rgba(21, 41, 124, ${this.opacity})`; // #15297c
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();

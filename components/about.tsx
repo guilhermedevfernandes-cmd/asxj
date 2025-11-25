@@ -27,7 +27,7 @@ const About = () => {
           className="mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">
-            Nossa <span className="text-[#1E40AF]">História</span>
+            Nossa <span className="text-[#15297c]">História</span>
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
             {companyInfo?.about ?? ""}
@@ -44,10 +44,10 @@ const About = () => {
             className="space-y-6"
           >
             {/* Mission Card */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#60A5FA]">
+            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-[#60A5FA]/10 rounded-lg">
-                  <Target className="w-7 h-7 text-[#1E40AF]" />
+                <div className="flex-shrink-0 p-3 bg-[#15297c]/10 rounded-lg">
+                  <Target className="w-7 h-7 text-[#15297c]" />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">
@@ -61,10 +61,10 @@ const About = () => {
             </div>
 
             {/* Partnerships Card */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#3B82F6]">
+            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-[#3B82F6]/10 rounded-lg">
-                  <Globe className="w-7 h-7 text-[#3B82F6]" />
+                <div className="flex-shrink-0 p-3 bg-[#15297c]/10 rounded-lg">
+                  <Globe className="w-7 h-7 text-[#15297c]" />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">
@@ -78,10 +78,10 @@ const About = () => {
             </div>
 
             {/* Innovation Card */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#3B82F6]">
+            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-[#3B82F6]/10 rounded-lg">
-                  <Lightbulb className="w-7 h-7 text-[#3B82F6]" />
+                <div className="flex-shrink-0 p-3 bg-[#15297c]/10 rounded-lg">
+                  <Lightbulb className="w-7 h-7 text-[#15297c]" />
                 </div>
                 <div>
                   <h4 className="text-xl font-bold text-gray-900 mb-2">
@@ -102,7 +102,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1E40AF] to-[#3B82F6] shadow-xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-[#15297c] to-[#15297c] shadow-xl">
               {/* Placeholder for user's image */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center text-white p-8">

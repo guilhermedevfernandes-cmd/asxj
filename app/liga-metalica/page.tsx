@@ -201,7 +201,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#1E40AF]/5 to-[#60A5FA]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#15297c]/5 to-[#15297c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
       {/* Product Image */}
       <div className="relative w-full h-48 overflow-hidden bg-gray-100">
@@ -235,8 +235,8 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
               {product.strength}
             </span>
           </div>
-          <div className="p-3 bg-[#1E40AF]/10 rounded-lg group-hover:bg-[#1E40AF] transition-colors duration-300">
-            <Sparkles className="w-6 h-6 text-[#1E40AF] group-hover:text-white transition-colors duration-300" />
+          <div className="p-3 bg-[#15297c]/10 rounded-lg group-hover:bg-[#15297c] transition-colors duration-300">
+            <Sparkles className="w-6 h-6 text-[#15297c] group-hover:text-white transition-colors duration-300" />
           </div>
         </div>
 
@@ -247,7 +247,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
           {shouldTruncate && (
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="mt-2 text-sm font-medium text-[#1E40AF] hover:text-[#1E3A8A] transition-colors"
+              className="mt-2 text-sm font-medium text-[#15297c] hover:text-[#0f1f5a] transition-colors"
             >
               {isExpanded ? "Ler menos" : "Ler mais"}
             </button>
@@ -257,14 +257,14 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         <div className="space-y-2 mb-4">
           {product.features.map((feature, idx) => (
             <div key={idx} className="flex items-center text-sm text-gray-700">
-              <div className="w-1.5 h-1.5 bg-[#60A5FA] rounded-full mr-2" />
+              <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
               {feature}
             </div>
           ))}
         </div>
 
         <div className="pt-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#1E40AF] text-white rounded-lg hover:bg-[#1E3A8A] transition-colors duration-300 font-medium group">
+          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group">
             Solicitar Orçamento
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
           </button>
@@ -288,7 +288,7 @@ export default function LigaMetalicaPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#1E40AF] via-[#1E3A8A] to-[#1E40AF] overflow-hidden">
+      <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#15297c] via-[#0f1f5a] to-[#15297c] overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -342,7 +342,7 @@ export default function LigaMetalicaPage() {
                 onClick={() => setSelectedSeries("ESN")}
                 className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
                   selectedSeries === "ESN"
-                    ? "bg-[#1E40AF] text-white shadow-lg scale-105"
+                    ? "bg-[#15297c] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -356,7 +356,7 @@ export default function LigaMetalicaPage() {
                 onClick={() => setSelectedSeries("EDA")}
                 className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
                   selectedSeries === "EDA"
-                    ? "bg-[#1E40AF] text-white shadow-lg scale-105"
+                    ? "bg-[#15297c] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -370,7 +370,7 @@ export default function LigaMetalicaPage() {
                 onClick={() => setSelectedSeries("MB")}
                 className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
                   selectedSeries === "MB"
-                    ? "bg-[#1E40AF] text-white shadow-lg scale-105"
+                    ? "bg-[#15297c] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
@@ -457,7 +457,7 @@ export default function LigaMetalicaPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#1E40AF] to-[#1E3A8A]">
+      <section className="py-20 bg-gradient-to-br from-[#15297c] to-[#0f1f5a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -474,7 +474,7 @@ export default function LigaMetalicaPage() {
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#60A5FA] text-[#1E40AF] font-semibold rounded-lg hover:bg-[#8fb83a] transition-colors duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#FECD28] text-[#15297c] font-semibold rounded-lg hover:bg-[#FECD28]/90 transition-colors duration-300 shadow-lg"
             >
               Fale Conosco
               <ArrowRight className="w-5 h-5" />

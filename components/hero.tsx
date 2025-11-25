@@ -48,7 +48,7 @@ const Hero = () => {
             priority
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1E40AF]/95 via-[#1E40AF]/85 to-[#1E40AF]/75" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#15297c]/95 via-[#15297c]/85 to-[#15297c]/75" />
         </div>
       </motion.div>
 
