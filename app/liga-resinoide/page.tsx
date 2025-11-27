@@ -82,6 +82,16 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     return "bg-gray-100 text-gray-800 border-gray-300";
   };
 
+  // Função para obter o caminho da imagem baseado no código do produto
+  const getProductImagePath = (code: string) => {
+    const imageMap: Record<string, string> = {
+      "EDA 2021": "/fotos ligante resinoide/EDA 2021.png",
+      "EDA 2023": "/fotos ligante resinoide/EDA 2023.png",
+      "EFRD-S": "/fotos ligante resinoide/EFRD-S.png",
+    };
+    return imageMap[code] || null;
+  };
+
   return (
     <motion.div
       ref={ref}
@@ -92,30 +102,28 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     >
       <div className="absolute inset-0 bg-gradient-to-br from-[#15297c]/5 to-[#15297c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       
-      {/* Image Placeholder - Substitua por imagem real quando disponível */}
+      {/* Product Image */}
       <div className="relative w-full h-48 bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 overflow-hidden group-hover:from-gray-100 group-hover:via-gray-150 group-hover:to-gray-250 transition-all duration-300">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center p-4">
-            <div className="relative w-20 h-20 mx-auto mb-3 bg-white/80 rounded-lg flex items-center justify-center shadow-sm">
-              <ImageIcon className="w-10 h-10 text-gray-400" />
+        {getProductImagePath(product.code) ? (
+          <Image
+            src={getProductImagePath(product.code)!}
+            alt={`${product.code} - ${product.title}`}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            priority={index < 3}
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center p-4">
+              <div className="relative w-20 h-20 mx-auto mb-3 bg-white/80 rounded-lg flex items-center justify-center shadow-sm">
+                <ImageIcon className="w-10 h-10 text-gray-400" />
+              </div>
+              <p className="text-xs text-gray-500 font-semibold mb-1">Imagem do produto</p>
+              <p className="text-xs text-gray-400">{product.code}</p>
             </div>
-            <p className="text-xs text-gray-500 font-semibold mb-1">Imagem do produto</p>
-            <p className="text-xs text-gray-400">{product.code}</p>
           </div>
-        </div>
-        {/* 
-        TODO: Quando tiver as imagens, descomente e ajuste o caminho:
-        Coloque as imagens em: /public/products/liga-resinoide/
-        Nome dos arquivos: eda-2021.jpg, efrd-s.jpg, eda-2023.jpg
-        
-        <Image
-          src={`/products/liga-resinoide/${product.code.toLowerCase().replace(/\s+/g, '-').replace('/', '-')}.jpg`}
-          alt={`${product.code} - ${product.title}`}
-          fill
-          className="object-cover"
-          priority={index < 3}
-        />
-        */}
+        )}
       </div>
       
       <div className="relative p-6">

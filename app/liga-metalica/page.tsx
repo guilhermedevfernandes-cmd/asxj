@@ -184,6 +184,11 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     if (code.startsWith("ESN")) {
       return `/ESN/${code}.png`;
     } else if (code.startsWith("EDA")) {
+      // EDA 2215: tenta primeiro sem espaço (novo), se não existir usa com espaço
+      if (code === "EDA 2215") {
+        // Primeiro tenta o arquivo sem espaço (novo)
+        return `/EDA/EDA2215.png`;
+      }
       return `/EDA/${code}.png`;
     } else if (code.startsWith("MB")) {
       return `/MB/${code}.png`;
@@ -213,6 +218,13 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             priority={index < 3}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            onError={(e) => {
+              // Fallback: se EDA2215.png não existir, tenta EDA 2215.png
+              if (product.code === "EDA 2215" && imagePath.includes("EDA2215")) {
+                const target = e.target as HTMLImageElement;
+                target.src = "/EDA/EDA 2215.png";
+              }
+            }}
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
@@ -474,7 +486,7 @@ export default function LigaMetalicaPage() {
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#FECD28] text-[#15297c] font-semibold rounded-lg hover:bg-[#FECD28]/90 transition-colors duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#D98C3C] text-white font-semibold rounded-lg hover:bg-[#D98C3C]/90 transition-colors duration-300 shadow-lg"
             >
               Fale Conosco
               <ArrowRight className="w-5 h-5" />

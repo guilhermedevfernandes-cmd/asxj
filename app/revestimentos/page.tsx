@@ -12,81 +12,57 @@ interface Product {
   code: string;
   title: string;
   description: string;
-  strength: string;
+  type: string;
   features: string[];
 }
 
-const cbnProducts: Product[] = [
+const revestimentosProducts: Product[] = [
   {
-    code: "EBN 2000",
-    title: "EBN 2000",
-    description: "Abrasivo CBN (Nitreto de Boro Cúbico) da série EBN, desenvolvido para aplicações de retificação de materiais ferrosos. Oferece excelente desempenho em operações de alta velocidade e alta precisão.",
-    strength: "Força intermediária",
+    code: "Cobre",
+    title: "Revestimento de Cobre",
+    description: "Revestimento de cobre aplicado em grãos de diamante para melhorar a aderência e retenção em ligantes metálicos. O cobre oferece excelente condutividade térmica e propriedades de ligação superiores.",
+    type: "Revestimento Metálico",
     features: [
-      "Retificação de materiais ferrosos",
-      "Alta velocidade",
-      "Alta precisão",
-      "Excelente desempenho"
+      "Excelente aderência em ligantes metálicos",
+      "Alta condutividade térmica",
+      "Melhor retenção dos grãos",
+      "Aplicações em serração e perfuração"
     ]
   },
   {
-    code: "EBN 5000",
-    title: "EBN 5000",
-    description: "Abrasivo CBN de alta qualidade da série EBN, ideal para aplicações que exigem acabamento superior e controle dimensional preciso. Desenvolvido para retificação de aços endurecidos e materiais ferrosos.",
-    strength: "Força alta",
+    code: "Metálico",
+    title: "Revestimento Metálico",
+    description: "Revestimento metálico versátil que proporciona excelente ligação entre os grãos de diamante e a matriz do ligante. Ideal para aplicações que exigem alta resistência e durabilidade.",
+    type: "Revestimento Metálico",
     features: [
-      "Alta qualidade",
-      "Acabamento superior",
-      "Controle dimensional preciso",
-      "Aços endurecidos"
+      "Alta resistência e durabilidade",
+      "Excelente ligação com matriz metálica",
+      "Versatilidade de aplicação",
+      "Desempenho superior"
     ]
   },
   {
-    code: "EBN 6000",
-    title: "EBN 6000",
-    description: "Abrasivo CBN de alto desempenho da série EBN, oferecendo excelente vida útil e consistência em operações de retificação. Ideal para aplicações que exigem alta produtividade e qualidade.",
-    strength: "Força alta",
+    code: "Níquel - Smooth",
+    title: "Revestimento de Níquel - Smooth",
+    description: "Revestimento de níquel com superfície lisa (smooth) que oferece excelente proteção aos grãos de diamante e melhora significativamente a aderência em ligantes resinóides. Ideal para aplicações de retificação de precisão.",
+    type: "Revestimento Metálico",
     features: [
-      "Alto desempenho",
-      "Excelente vida útil",
-      "Alta produtividade",
-      "Consistência"
+      "Superfície lisa e uniforme",
+      "Proteção superior dos grãos",
+      "Excelente para ligantes resinóides",
+      "Retificação de precisão"
     ]
   },
   {
-    code: "EBN 8000",
-    title: "EBN 8000",
-    description: "Abrasivo CBN premium da série EBN, representando o mais alto nível de qualidade e desempenho. Desenvolvido para aplicações mais exigentes que requerem máxima precisão e acabamento especular.",
-    strength: "Força extremamente alta",
+    code: "Niquel - Spiky",
+    title: "Revestimento de Níquel - Spiky",
+    description: "Revestimento de níquel com superfície texturizada (spiky) que proporciona maior área de contato e aderência mecânica aprimorada. Ideal para aplicações que exigem máxima retenção dos grãos abrasivos.",
+    type: "Revestimento Metálico",
     features: [
-      "Qualidade premium",
-      "Máxima precisão",
-      "Acabamento especular",
-      "Aplicações exigentes"
-    ]
-  },
-  {
-    code: "EBN A",
-    title: "EBN A",
-    description: "Abrasivo CBN da série EBN tipo A, desenvolvido para aplicações gerais de retificação. Oferece bom equilíbrio entre desempenho e custo-benefício para uma ampla variedade de aplicações.",
-    strength: "Força intermediária",
-    features: [
-      "Aplicações gerais",
-      "Bom custo-benefício",
-      "Versatilidade",
-      "Ampla variedade de aplicações"
-    ]
-  },
-  {
-    code: "EBN AA",
-    title: "EBN AA",
-    description: "Abrasivo CBN de alta qualidade da série EBN tipo AA, oferecendo excelente desempenho em retificação de precisão. Ideal para aplicações que exigem acabamento superior e tolerâncias apertadas.",
-    strength: "Força alta",
-    features: [
-      "Alta qualidade",
-      "Retificação de precisão",
-      "Acabamento superior",
-      "Tolerâncias apertadas"
+      "Superfície texturizada",
+      "Maior área de contato",
+      "Aderência mecânica superior",
+      "Máxima retenção dos grãos"
     ]
   }
 ];
@@ -104,18 +80,15 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     ? product.description.substring(0, MAX_DESCRIPTION_LENGTH) + "..."
     : product.description;
 
-  const getStrengthColor = (strength: string) => {
-    if (strength.includes("extremamente")) return "bg-red-100 text-red-800 border-red-300";
-    if (strength.includes("alta") && !strength.includes("extremamente")) return "bg-orange-100 text-orange-800 border-orange-300";
-    return "bg-blue-100 text-blue-800 border-blue-300";
-  };
-
   // Determina o caminho da imagem baseado no código do produto
   const getImagePath = (code: string) => {
-    if (code.startsWith("EBN")) {
-      return `/CBN/${code}.png`;
+    // Normaliza o nome do arquivo
+    if (code === "Niquel - Spiky") {
+      return `/Revestimentos/Niquel - Spiky.png`;
+    } else if (code === "Níquel - Smooth") {
+      return `/Revestimentos/Níquel - Smooth.png`;
     }
-    return null;
+    return `/Revestimentos/${code}.png`;
   };
 
   const imagePath = getImagePath(product.code);
@@ -157,9 +130,9 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       <div className="relative p-6">
         <div className="flex items-start justify-between mb-4">
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.code}</h3>
-            <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border ${getStrengthColor(product.strength)}`}>
-              {product.strength}
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold border bg-blue-100 text-blue-800 border-blue-300">
+              {product.type}
             </span>
           </div>
           <div className="p-3 bg-[#15297c]/10 rounded-lg group-hover:bg-[#15297c] transition-colors duration-300">
@@ -201,7 +174,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
   );
 };
 
-export default function CBNBorazonPage() {
+export default function RevestimentosPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -228,23 +201,23 @@ export default function CBNBorazonPage() {
             className="text-center text-white"
           >
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-              CBN - Borazon
+              Revestimentos
             </h1>
             <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Nitreto de Boro Cúbico (CBN) para retificação de materiais ferrosos e aplicações de alta precisão
+              Revestimentos metálicos para grãos de diamante que melhoram a aderência, retenção e desempenho em ligantes diversos
             </p>
             <div className="flex items-center justify-center gap-4 text-sm text-gray-300 flex-wrap">
               <div className="flex items-center gap-2">
                 <Shield className="w-5 h-5" />
-                <span>Alta estabilidade térmica</span>
+                <span>Melhora a aderência</span>
               </div>
               <div className="flex items-center gap-2">
                 <Zap className="w-5 h-5" />
-                <span>Excelente para materiais ferrosos</span>
+                <span>Maior retenção dos grãos</span>
               </div>
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-5 h-5" />
-                <span>Alta precisão e acabamento</span>
+                <span>Desempenho superior</span>
               </div>
             </div>
           </motion.div>
@@ -262,22 +235,19 @@ export default function CBNBorazonPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              CBN - Borazon - Excelência em Retificação de Materiais Ferrosos
+              Revestimentos Metálicos - Excelência em Aderência e Retenção
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              O Nitreto de Boro Cúbico (CBN), também conhecido como Borazon, é um superabrasivo sintético 
-              especialmente desenvolvido para a retificação de materiais ferrosos. Com dureza superior ao 
-              diamante em aplicações com aços e ligas ferrosas, o CBN oferece excelente desempenho em 
-              operações de alta velocidade e alta precisão.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Nossa linha de produtos CBN (série EBN) é desenvolvida para oferecer o melhor desempenho em 
-              cada tipo de aplicação, desde retificação de precisão até operações de alta produtividade. 
-              Os abrasivos CBN são ideais para retificação de aços endurecidos, aços rápidos, aços ferramenta 
-              e outras ligas ferrosas que exigem acabamento superior e controle dimensional preciso.
+              Os revestimentos metálicos são aplicados em grãos de diamante para melhorar significativamente 
+              a aderência entre os grãos abrasivos e a matriz do ligante. Este processo aumenta a retenção 
+              dos grãos, prolonga a vida útil da ferramenta e melhora o desempenho geral em operações de 
+              usinagem, serração e perfuração.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              <strong>Tamanhos disponíveis:</strong> 20/30, 30/40, 40/45, 45/50, 50/60, 60/70, 70/80, 80/100, 100/120, 120/140, 140/170, 170/200, 200/230, 230/270, 270/325, 325/400 e 400/500.
+              Oferecemos diferentes tipos de revestimentos metálicos, cada um desenvolvido para aplicações 
+              específicas e tipos de ligantes diferentes. Desde revestimentos de cobre para ligantes metálicos 
+              até revestimentos de níquel com diferentes texturas para ligantes resinóides, nossa linha completa 
+              garante o melhor desempenho para cada necessidade.
             </p>
           </motion.div>
         </div>
@@ -292,7 +262,7 @@ export default function CBNBorazonPage() {
             transition={{ duration: 0.3 }}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
           >
-            {cbnProducts.map((product, index) => (
+            {revestimentosProducts.map((product, index) => (
               <ProductCard key={product.code} product={product} index={index} />
             ))}
           </motion.div>
@@ -310,48 +280,48 @@ export default function CBNBorazonPage() {
             className="bg-white rounded-2xl shadow-lg p-8"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-              Especificações Técnicas
+              Benefícios dos Revestimentos Metálicos
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vantagens Técnicas</h3>
+                <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
+                    Melhora significativa da aderência entre grãos e matriz
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
+                    Aumento da retenção dos grãos abrasivos
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
+                    Prolongamento da vida útil da ferramenta
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
+                    Melhor distribuição térmica durante o processo
+                  </li>
+                </ul>
+              </div>
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Aplicações Principais</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Retificação de aços endurecidos
+                    Ferramentas de serração e perfuração
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Retificação de aços rápidos e aços ferramenta
+                    Rebolos de retificação de precisão
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Retificação de precisão de componentes automotivos
+                    Ferramentas para ligantes metálicos e resinóides
                   </li>
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Operações de alta velocidade e alta produtividade
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vantagens do CBN</h3>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Dureza superior ao diamante em materiais ferrosos
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Alta estabilidade térmica e química
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Excelente vida útil e consistência
-                  </li>
-                  <li className="flex items-center">
-                    <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />
-                    Acabamento superior e controle dimensional preciso
+                    Aplicações que exigem alta retenção de grãos
                   </li>
                 </ul>
               </div>

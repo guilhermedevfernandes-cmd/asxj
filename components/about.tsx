@@ -16,7 +16,7 @@ const About = () => {
   const companyInfo = contentData?.companyInfo ?? {};
 
   return (
-    <section id="sobre" className="py-20 bg-gray-50">
+    <section id="sobre" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -24,18 +24,18 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="mb-16"
+          className="mb-8 sm:mb-12 lg:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 lg:mb-8">
             Nossa <span className="text-[#15297c]">História</span>
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed max-w-4xl">
+          <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl">
             {companyInfo?.about ?? ""}
           </p>
         </motion.div>
 
         {/* Content Grid: Bullets Left + Image Right */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left: Bullet Cards */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -44,16 +44,16 @@ const About = () => {
             className="space-y-6"
           >
             {/* Mission Card */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-[#15297c]/10 rounded-lg">
-                  <Target className="w-7 h-7 text-[#15297c]" />
+            <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 p-2 sm:p-3 bg-[#15297c]/10 rounded-lg">
+                  <Target className="w-5 h-5 sm:w-7 sm:h-7 text-[#15297c]" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                     Nossa Missão
                   </h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     {companyInfo?.mission ?? ""}
                   </p>
                 </div>
@@ -61,16 +61,16 @@ const About = () => {
             </div>
 
             {/* Partnerships Card */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-[#15297c]/10 rounded-lg">
-                  <Globe className="w-7 h-7 text-[#15297c]" />
+            <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 p-2 sm:p-3 bg-[#15297c]/10 rounded-lg">
+                  <Globe className="w-5 h-5 sm:w-7 sm:h-7 text-[#15297c]" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                     Parcerias Internacionais
                   </h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     Trabalhamos com os principais fabricantes mundiais de diamantes industriais e superabrasivos.
                   </p>
                 </div>
@@ -78,16 +78,16 @@ const About = () => {
             </div>
 
             {/* Innovation Card */}
-            <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-[#15297c]/10 rounded-lg">
-                  <Lightbulb className="w-7 h-7 text-[#15297c]" />
+            <div className="bg-white rounded-xl p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-[#15297c]">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 p-2 sm:p-3 bg-[#15297c]/10 rounded-lg">
+                  <Lightbulb className="w-5 h-5 sm:w-7 sm:h-7 text-[#15297c]" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">
+                  <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
                     Inovação Constante
                   </h4>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                     Acompanhamos as últimas tecnologias do mercado para oferecer as melhores soluções.
                   </p>
                 </div>

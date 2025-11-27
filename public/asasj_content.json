@@ -154,6 +154,27 @@
         "Economia significativa no custo por peça produzida",
         "Baixo coeficiente de atrito e mínima geração de calor"
       ]
+    },
+    {
+      "id": "revestimentos",
+      "name": "Revestimentos",
+      "subtitle": "Revestimentos Metálicos para Grãos de Diamante",
+      "shortDesc": "Revestimentos metálicos que melhoram a aderência, retenção e desempenho dos grãos de diamante em ligantes diversos.",
+      "fullDesc": "Os revestimentos metálicos são aplicados em grãos de diamante para melhorar significativamente a aderência entre os grãos abrasivos e a matriz do ligante. Este processo aumenta a retenção dos grãos, prolonga a vida útil da ferramenta e melhora o desempenho geral em operações de usinagem, serração e perfuração. Oferecemos diferentes tipos de revestimentos metálicos, cada um desenvolvido para aplicações específicas e tipos de ligantes diferentes.",
+      "applications": [
+        "Ferramentas de serração e perfuração",
+        "Rebolos de retificação de precisão",
+        "Ferramentas para ligantes metálicos",
+        "Ferramentas para ligantes resinóides",
+        "Aplicações que exigem alta retenção de grãos"
+      ],
+      "benefits": [
+        "Melhora significativa da aderência entre grãos e matriz",
+        "Aumento da retenção dos grãos abrasivos",
+        "Prolongamento da vida útil da ferramenta",
+        "Melhor distribuição térmica durante o processo",
+        "Desempenho superior em operações de usinagem"
+      ]
     }
   ]
 }
