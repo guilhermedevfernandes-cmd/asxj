@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="relative w-full h-full">
           {/* Desktop Image */}
           <Image
-            src="/arquivos novos atualizacao/foto hero principal.png"
+            src="/herobackground/opcao1_desktop.jpg"
             alt="Moderna instalação de fabricação de abrasivos diamantados"
             fill
             className="object-cover hidden md:block"
@@ -41,7 +41,7 @@ const Hero = () => {
           />
           {/* Mobile Image */}
           <Image
-            src="/arquivos novos atualizacao/foto hero principal.png"
+            src="/herobackground/opcao1_mobile.jpg"
             alt="Moderna instalação de fabricação de abrasivos diamantados"
             fill
             className="object-cover md:hidden"
@@ -157,7 +157,7 @@ const Hero = () => {
             <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] flex items-center justify-center">
               <div className="relative w-full h-full max-w-md mx-auto">
                 <Image
-                  src="/Imagem da direita Hero.png"
+                  src="/arquivos novos atualizacao/foto hero principal.png"
                   alt="Diamantes industriais AS&ASJ"
                   fill
                   className="object-contain"
