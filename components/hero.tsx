@@ -32,7 +32,7 @@ const Hero = () => {
         <div className="relative w-full h-full">
           {/* Desktop Image */}
           <Image
-            src="/herobackground/opcao1_desktop.jpg"
+            src="/arquivos novos atualizacao/foto hero principal.png"
             alt="Moderna instalação de fabricação de abrasivos diamantados"
             fill
             className="object-cover hidden md:block"
@@ -41,7 +41,7 @@ const Hero = () => {
           />
           {/* Mobile Image */}
           <Image
-            src="/herobackground/opcao1_mobile.jpg"
+            src="/arquivos novos atualizacao/foto hero principal.png"
             alt="Moderna instalação de fabricação de abrasivos diamantados"
             fill
             className="object-cover md:hidden"
@@ -66,7 +66,14 @@ const Hero = () => {
             className="text-left"
           >
             <div className="flex items-center gap-2 mb-6">
-              <DiamondIcon size={28} className="text-[#D98C3C]" />
+              <div className="relative w-7 h-7">
+                <Image
+                  src="/arquivos novos atualizacao/diamante.webp"
+                  alt="Diamante"
+                  fill
+                  className="object-contain"
+                />
+              </div>
               <span className="text-[#D98C3C] font-semibold text-lg">
                 Desde 1981
               </span>
@@ -84,7 +91,7 @@ const Hero = () => {
 
             {/* CTA Buttons with Magnetic Effect */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
-              <a href="#contato" className="inline-block w-full sm:w-auto">
+              <a href="https://wa.me/5511988575232" target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
                 <button className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95" style={{ backgroundColor: '#D98C3C', color: '#000000' }}>
                   <span style={{ color: '#000000' }}>Solicite um Orçamento</span>
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" style={{ color: '#000000', stroke: '#000000' }} />

@@ -6,6 +6,7 @@ import Differentials from "@/components/differentials";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import WhatsAppButton from "@/components/whatsapp-button";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <Differentials />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

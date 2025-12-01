@@ -104,9 +104,9 @@ const Contact = () => {
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-[#15297c]" />
                 </div>
                 <div className="min-w-0">
-                  <h4 className="font-semibold text-sm sm:text-base text-gray-900 mb-1">Telefone</h4>
-                  <a href="tel:+5599999999998" className="text-sm sm:text-base text-gray-700 hover:text-[#15297c] break-all">
-                    (99) 9999-9998
+                  <h4 className="font-semibold text-sm sm:text-base text-gray-900 mb-1">Telefone/WhatsApp</h4>
+                  <a href="https://wa.me/5511988575232" target="_blank" rel="noopener noreferrer" className="text-sm sm:text-base text-gray-700 hover:text-[#15297c] break-all">
+                    (11) 98857-5232
                   </a>
                 </div>
               </div>
@@ -117,8 +117,8 @@ const Contact = () => {
                 </div>
                 <div className="min-w-0">
                   <h4 className="font-semibold text-sm sm:text-base text-gray-900 mb-1">E-mail</h4>
-                  <a href="mailto:contato@asasj.com.br" className="text-sm sm:text-base text-gray-700 hover:text-[#15297c] break-all">
-                    contato@asasj.com.br
+                  <a href="mailto:asjcontato@hotmail.com" className="text-sm sm:text-base text-gray-700 hover:text-[#15297c] break-all">
+                    asjcontato@hotmail.com
                   </a>
                 </div>
               </div>
@@ -130,7 +130,7 @@ const Contact = () => {
                 <div className="min-w-0">
                   <h4 className="font-semibold text-sm sm:text-base text-gray-900 mb-1">Localização</h4>
                   <p className="text-sm sm:text-base text-gray-700">
-                    Brasil
+                    Atibaia - SP
                   </p>
                 </div>
               </div>
@@ -139,8 +139,7 @@ const Contact = () => {
             <div className="bg-gradient-to-br from-[#15297c] to-[#15297c] rounded-xl p-6 sm:p-8 text-white">
               <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Horário de Atendimento</h4>
               <p className="text-sm sm:text-base text-gray-100">
-                Segunda a Sexta: 8h às 18h<br />
-                Sábado: 8h às 12h
+                Segunda a Sexta: 8h às 17h
               </p>
             </div>
           </motion.div>

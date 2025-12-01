@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import WhatsAppButton from "@/components/whatsapp-button";
 import { Sparkles, Zap, Shield, TrendingUp, ArrowRight, Image as ImageIcon } from "lucide-react";
 import Image from "next/image";
 
@@ -301,14 +302,27 @@ export default function LigaMetalicaPage() {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#15297c] via-[#0f1f5a] to-[#15297c] overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/arquivos novos atualizacao/foto de fundo liga metalica .jpg"
+            alt="Fundo Liga Metálica"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#15297c]/95 via-[#15297c]/85 to-[#15297c]/75" />
+        </div>
+        
+        <div className="absolute inset-0 opacity-10 z-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -496,6 +510,7 @@ export default function LigaMetalicaPage() {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }

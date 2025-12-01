@@ -74,14 +74,19 @@ const ProductCard = ({ product, index, inView }: any) => {
       "metal-bond": "Ligante Metalico", // Sem acento
       "borazon": "CBN",
       "natural": "Natural",
-      "revestimentos": "Revestimento",
+      "revestimentos": "spiky nickel",
       "pcd-pdc": "PCD"
     };
     return imageMap[productId] || null;
   };
 
   const imageName = getProductImage(product?.id ?? "");
-  const imagePath = imageName ? `/Fotos capa principal/${imageName}.png` : null;
+  let imagePath: string | null = null;
+  if (product?.id === "revestimentos") {
+    imagePath = "/arquivos novos atualizacao/spiky nickel.avif";
+  } else if (imageName) {
+    imagePath = `/Fotos capa principal/${imageName}.png`;
+  }
 
   return (
     <motion.div

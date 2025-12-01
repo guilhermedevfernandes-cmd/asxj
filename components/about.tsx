@@ -27,11 +27,13 @@ const About = () => {
           className="mb-8 sm:mb-12 lg:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 lg:mb-8">
-            Nossa <span className="text-[#15297c]">História</span>
+            Sobre <span className="text-[#15297c]">Nós</span>
           </h2>
-          <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl">
-            {companyInfo?.about ?? ""}
-          </p>
+          <div className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-4xl space-y-4">
+            {companyInfo?.about?.split('\n\n').map((paragraph: string, index: number) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
         </motion.div>
 
         {/* Content Grid: Bullets Left + Image Right */}

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import WhatsAppButton from "@/components/whatsapp-button";
 import { Sparkles, Zap, Shield, TrendingUp, ArrowRight, Image as ImageIcon } from "lucide-react";
 import Image from "next/image";
 
@@ -348,6 +349,7 @@ export default function DiamanteNaturaisPage() {
       </section>
 
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
