@@ -302,54 +302,65 @@ export default function LigaMetalicaPage() {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-gradient-to-br from-[#15297c] via-[#0f1f5a] to-[#15297c] overflow-hidden">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/arquivos novos atualizacao/foto de fundo liga metalica .jpg"
-            alt="Fundo Liga Metálica"
-            fill
-            className="object-cover"
-            priority
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#15297c]/95 via-[#15297c]/85 to-[#15297c]/75" />
-        </div>
-        
-        <div className="absolute inset-0 opacity-10 z-10">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center text-white"
-          >
-            <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-              Liga Metálica
-            </h1>
-            <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Diamantes sintéticos de alta qualidade para aplicações de serração e perfuração
-            </p>
-            <div className="flex items-center justify-center gap-4 text-sm text-gray-300">
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5" />
-                <span>Alta estabilidade térmica</span>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center lg:text-left text-white"
+            >
+              <h1 className="text-5xl sm:text-6xl font-bold mb-6">
+                Liga Metálica
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto lg:mx-0 mb-8">
+                Diamantes sintéticos de alta qualidade para aplicações de serração e perfuração
+              </p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-sm text-gray-300 mb-8">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-5 h-5" />
+                  <span>Alta estabilidade térmica</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Zap className="w-5 h-5" />
+                  <span>Elevada resistência</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5" />
+                  <span>Desempenho superior</span>
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Zap className="w-5 h-5" />
-                <span>Elevada resistência</span>
+            </motion.div>
+
+            {/* Right Column - Product Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative hidden lg:block"
+            >
+              <div className="relative w-full h-[500px] flex items-center justify-center">
+                <div className="relative w-full h-full max-w-md mx-auto">
+                  <Image
+                    src="/arquivos novos atualizacao/foto de fundo liga metalica .jpg"
+                    alt="Produtos Liga Metálica - EDA e ESN"
+                    fill
+                    className="object-contain"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <TrendingUp className="w-5 h-5" />
-                <span>Desempenho superior</span>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
