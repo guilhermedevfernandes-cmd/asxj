@@ -152,17 +152,17 @@ const Hero = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative order-first lg:order-none mt-8 lg:mt-0"
+            className="relative order-first lg:order-none mt-8 lg:mt-0 flex items-center justify-center w-full"
           >
-            <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] flex items-center justify-center">
-              <div className="relative w-full h-full max-w-md mx-auto">
+            <div className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] xl:h-[750px] 2xl:h-[800px] flex items-center justify-center">
+              <div className="relative w-full h-full">
                 <Image
                   src="/FOTO DA DIREITA HERO/Imagem da direita Hero.png"
                   alt="Diamantes industriais AS&ASJ"
                   fill
-                  className="object-contain"
+                  className="object-contain scale-110"
                   priority
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 100vw"
                 />
               </div>
             </div>
