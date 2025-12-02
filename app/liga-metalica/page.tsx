@@ -372,12 +372,16 @@ export default function LigaMetalicaPage() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                <div className="relative w-16 h-16 mb-2">
+                <div className="relative w-28 h-28 mb-2">
                   <Image
                     src="/Logo da eid.png"
                     alt="Logo EID"
                     fill
-                    className="object-contain"
+                    className="object-contain transition-all duration-300"
+                    style={selectedSeries !== "ESN" ? { 
+                      filter: "brightness(0) saturate(100%)",
+                      opacity: 0.7
+                    } : {}}
                   />
                 </div>
                 <div className="flex items-center justify-center gap-2">
@@ -394,12 +398,16 @@ export default function LigaMetalicaPage() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                <div className="relative w-16 h-16 mb-2">
+                <div className="relative w-28 h-28 mb-2">
                   <Image
                     src="/Logo da eid.png"
                     alt="Logo EID"
                     fill
-                    className="object-contain"
+                    className="object-contain transition-all duration-300"
+                    style={selectedSeries !== "EDA" ? { 
+                      filter: "brightness(0) saturate(100%)",
+                      opacity: 0.7
+                    } : {}}
                   />
                 </div>
                 <div className="flex items-center justify-center gap-2">
@@ -416,12 +424,16 @@ export default function LigaMetalicaPage() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                <div className="relative w-16 h-16 mb-2">
+                <div className="relative w-28 h-28 mb-2">
                   <Image
                     src="/Logo da eid.png"
                     alt="Logo EID"
                     fill
-                    className="object-contain"
+                    className="object-contain transition-all duration-300"
+                    style={selectedSeries !== "MB" ? { 
+                      filter: "brightness(0) saturate(100%)",
+                      opacity: 0.7
+                    } : {}}
                   />
                 </div>
                 <div className="flex items-center justify-center gap-2">

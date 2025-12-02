@@ -157,7 +157,7 @@ const Hero = () => {
             <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] flex items-center justify-center">
               <div className="relative w-full h-full max-w-md mx-auto">
                 <Image
-                  src="/arquivos novos atualizacao/foto hero principal.png"
+                  src="/FOTO DA DIREITA HERO/Imagem da direita Hero.png"
                   alt="Diamantes industriais AS&ASJ"
                   fill
                   className="object-contain"
