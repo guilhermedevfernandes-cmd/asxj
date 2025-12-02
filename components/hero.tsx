@@ -22,7 +22,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-start justify-center overflow-hidden"
     >
       {/* Particles Background */}
       <Particles />
@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 sm:pt-2 sm:pb-24 lg:pt-4 lg:pb-32"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-32"
       >
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column - Text Content */}
