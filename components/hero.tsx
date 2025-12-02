@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 sm:pt-12 sm:pb-24 lg:pt-16 lg:pb-32"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 pb-16 sm:pt-2 sm:pb-24 lg:pt-4 lg:pb-32"
       >
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column - Text Content */}
@@ -65,7 +65,7 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="text-left"
           >
-            <div className="flex items-center gap-2 mb-6">
+            <div className="flex items-center gap-2 mb-3">
               <div className="relative w-7 h-7">
                 <Image
                   src="/arquivos novos atualizacao/diamante.webp"
@@ -80,11 +80,11 @@ const Hero = () => {
             </div>
 
             {/* Title without animation */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-3 leading-tight">
               Diamantes que elevam o desempenho da indústria.
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 sm:mb-8 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-4 sm:mb-6 leading-relaxed">
               Conectando tecnologia internacional ao mercado brasileiro há mais de
               40 anos
             </p>
