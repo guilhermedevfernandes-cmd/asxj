@@ -22,7 +22,7 @@ const Hero = () => {
     <section
       ref={ref}
       id="inicio"
-      className="relative min-h-screen flex items-start justify-center overflow-hidden"
+      className="relative flex items-start justify-center overflow-hidden"
     >
       {/* Particles Background */}
       <Particles />
@@ -55,9 +55,9 @@ const Hero = () => {
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-4 sm:pt-20 sm:pb-6 lg:pt-24 lg:pb-8"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-14 sm:pt-20 sm:pb-16 lg:pt-24 lg:pb-20"
       >
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center">
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -90,7 +90,7 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons with Magnetic Effect */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a href="https://wa.me/5511988575232" target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
                 <button className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95" style={{ backgroundColor: '#D98C3C', color: '#000000' }}>
                   <span style={{ color: '#000000' }}>Solicite um Orçamento</span>
@@ -154,7 +154,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative order-first lg:order-none flex items-center justify-center w-full"
           >
-            <div className="relative w-full h-[700px] sm:h-[800px] lg:h-[900px] xl:h-[1000px] 2xl:h-[1100px] flex items-center justify-center overflow-visible">
+            <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[500px] xl:h-[550px] flex items-center justify-center">
               <div className="relative w-full h-full">
                 <Image
                   src="/FOTO DA DIREITA HERO/Imagem da direita Hero.png"
