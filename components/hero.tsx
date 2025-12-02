@@ -154,15 +154,16 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative order-first lg:order-none mt-8 lg:mt-0 flex items-center justify-center w-full"
           >
-            <div className="relative w-full h-[450px] sm:h-[550px] lg:h-[650px] xl:h-[750px] 2xl:h-[800px] flex items-center justify-center">
+            <div className="relative w-full h-[700px] sm:h-[800px] lg:h-[900px] xl:h-[1000px] 2xl:h-[1100px] flex items-center justify-center overflow-visible">
               <div className="relative w-full h-full">
                 <Image
                   src="/FOTO DA DIREITA HERO/Imagem da direita Hero.png"
                   alt="Diamantes industriais AS&ASJ"
                   fill
-                  className="object-contain scale-110"
+                  className="object-contain"
+                  style={{ transform: 'scale(3.5)', objectFit: 'contain' }}
                   priority
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 100vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                 />
               </div>
             </div>
