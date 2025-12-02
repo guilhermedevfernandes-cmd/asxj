@@ -129,16 +129,21 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       </div>
       
       <div className="relative p-6">
-        <div className="flex items-start justify-between mb-4">
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
-            <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold border bg-blue-100 text-blue-800 border-blue-300">
-              {product.type}
-            </span>
-          </div>
-          <div className="p-3 bg-[#15297c]/10 rounded-lg group-hover:bg-[#15297c] transition-colors duration-300">
-            <Sparkles className="w-6 h-6 text-[#15297c] group-hover:text-white transition-colors duration-300" />
-          </div>
+        {/* Logo EID */}
+        <div className="relative w-20 h-20 mb-4">
+          <Image
+            src="/Logo da eid.png"
+            alt="Logo EID"
+            fill
+            className="object-contain brightness-0 opacity-70"
+          />
+        </div>
+        
+        <div className="mb-4">
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
+          <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold border bg-blue-100 text-blue-800 border-blue-300">
+            {product.type}
+          </span>
         </div>
 
         <div className="mb-4">

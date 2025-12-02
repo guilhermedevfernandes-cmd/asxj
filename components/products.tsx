@@ -139,6 +139,16 @@ const ProductCard = ({ product, index, inView }: any) => {
           style={{ backgroundColor: borderColor }}
         />
         
+        {/* Logo EID */}
+        <div className="relative w-20 h-20 mb-3">
+          <Image
+            src="/Logo da eid.png"
+            alt="Logo EID"
+            fill
+            className="object-contain brightness-0 opacity-70"
+          />
+        </div>
+        
         <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 group-hover:text-[#15297c] transition-colors">
           {product?.id === "resin-bond" ? "Ligante Resinoide" : 
            product?.id === "metal-bond" ? "Ligante Metálico" : 
