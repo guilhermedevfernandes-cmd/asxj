@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Content */}
       <motion.div
         style={{ opacity }}
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-16 sm:pt-12 sm:pb-24 lg:pt-16 lg:pb-32"
       >
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left Column - Text Content */}
@@ -152,7 +152,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative order-first lg:order-none mt-8 lg:mt-0 flex items-center justify-center w-full"
+            className="relative order-first lg:order-none flex items-center justify-center w-full"
           >
             <div className="relative w-full h-[700px] sm:h-[800px] lg:h-[900px] xl:h-[1000px] 2xl:h-[1100px] flex items-center justify-center overflow-visible">
               <div className="relative w-full h-full">
