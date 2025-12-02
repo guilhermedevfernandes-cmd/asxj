@@ -366,12 +366,20 @@ export default function LigaMetalicaPage() {
             <div className="bg-gray-100 p-2 rounded-2xl inline-flex gap-2 w-full">
               <button
                 onClick={() => setSelectedSeries("ESN")}
-                className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex flex-col items-center ${
                   selectedSeries === "ESN"
                     ? "bg-[#15297c] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
+                <div className="relative w-16 h-16 mb-2">
+                  <Image
+                    src="/Logo da eid.png"
+                    alt="Logo EID"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <div className="flex items-center justify-center gap-2">
                   <Sparkles className="w-5 h-5" />
                   <span>Série ESN</span>
@@ -380,12 +388,20 @@ export default function LigaMetalicaPage() {
               </button>
               <button
                 onClick={() => setSelectedSeries("EDA")}
-                className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex flex-col items-center ${
                   selectedSeries === "EDA"
                     ? "bg-[#15297c] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
+                <div className="relative w-16 h-16 mb-2">
+                  <Image
+                    src="/Logo da eid.png"
+                    alt="Logo EID"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <div className="flex items-center justify-center gap-2">
                   <Zap className="w-5 h-5" />
                   <span>Série EDA</span>
@@ -394,12 +410,20 @@ export default function LigaMetalicaPage() {
               </button>
               <button
                 onClick={() => setSelectedSeries("MB")}
-                className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
+                className={`flex-1 px-6 py-4 rounded-xl font-semibold transition-all duration-300 flex flex-col items-center ${
                   selectedSeries === "MB"
                     ? "bg-[#15297c] text-white shadow-lg scale-105"
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
+                <div className="relative w-16 h-16 mb-2">
+                  <Image
+                    src="/Logo da eid.png"
+                    alt="Logo EID"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
                 <div className="flex items-center justify-center gap-2">
                   <Shield className="w-5 h-5" />
                   <span>Série MB</span>
