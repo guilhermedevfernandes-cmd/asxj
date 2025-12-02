@@ -64,7 +64,7 @@ const ProductCard = ({ product, index, inView }: any) => {
   const hasLink = !!productLink;
 
   // Cores alternadas para as bordas
-  const borderColors = ["#15297c", "#15297c", "#15297c", "#D98C3C", "#F58434"];
+  const borderColors = ["#15297c", "#15297c", "#15297c", "#15297c", "#F58434"];
   const borderColor = borderColors[index % borderColors.length];
 
   // Mapeamento de produtos para nomes de imagens (usando os nomes exatos dos arquivos)
