@@ -158,7 +158,7 @@ export default function PCDPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/Fotos capa principal/PCD.png"
+            src="/PCD cabeçalho.png"
             alt="Fundo PCD"
             fill
             className="object-cover"
