@@ -523,6 +523,137 @@ export default function LigaMetalicaPage() {
         </div>
       </section>
 
+      {/* Specifications Section */}
+      {(selectedSeries === "ESN" || selectedSeries === "EDA") && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-white rounded-2xl shadow-lg p-8"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                Especificações Técnicas
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                    Tamanhos Disponíveis
+                  </h3>
+                  {selectedSeries === "ESN" ? (
+                    <p className="text-gray-600">
+                      16/18, 18/20, 20/25, 20/30, 25/30, 30/35, 30/40, 35/40, 35/45, 40/45, 40/50, 45/50, 45/60, 50/60 e 50/70.
+                    </p>
+                  ) : (
+                    <p className="text-gray-600">
+                      60/70, 70/80, 80/100, 100/120, 120/140, 140/170, 170/200, 200/230, 270/325, 325/400 e 400/500.
+                    </p>
+                  )}
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4">Revestimentos</h3>
+                  <p className="text-gray-700 mb-2">
+                    Revestimento tradicional em níquel disponível em 30%, 56%, 60% ou em qualquer outra 
+                    porcentagem personalizada, conforme a necessidade do cliente.
+                  </p>
+                  <p className="text-gray-600">
+                    Consulte a página de "Revestimentos" para informações adicionais e demais tipos de revestimento.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* MB Table Section */}
+      {selectedSeries === "MB" && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-white rounded-2xl shadow-lg p-8"
+            >
+              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+                Tamanhos Disponíveis
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="bg-[#15297c] text-white">
+                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 1</th>
+                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 2</th>
+                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 3</th>
+                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 4</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0-0,20</td>
+                      <td className="border border-gray-300 px-4 py-3">0-2</td>
+                      <td className="border border-gray-300 px-4 py-3">5-10</td>
+                      <td className="border border-gray-300 px-4 py-3">20-40</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0-0,25</td>
+                      <td className="border border-gray-300 px-4 py-3">1-2</td>
+                      <td className="border border-gray-300 px-4 py-3">6-12</td>
+                      <td className="border border-gray-300 px-4 py-3">30-40</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0-0,50</td>
+                      <td className="border border-gray-300 px-4 py-3">1-3</td>
+                      <td className="border border-gray-300 px-4 py-3">8-12</td>
+                      <td className="border border-gray-300 px-4 py-3">30-50</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0,25-0,75</td>
+                      <td className="border border-gray-300 px-4 py-3">2-4</td>
+                      <td className="border border-gray-300 px-4 py-3">8-16</td>
+                      <td className="border border-gray-300 px-4 py-3">40-50</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0-1</td>
+                      <td className="border border-gray-300 px-4 py-3">3-5</td>
+                      <td className="border border-gray-300 px-4 py-3">10-20</td>
+                      <td className="border border-gray-300 px-4 py-3">40-60</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0,50-1</td>
+                      <td className="border border-gray-300 px-4 py-3">3-6</td>
+                      <td className="border border-gray-300 px-4 py-3">12-22</td>
+                      <td className="border border-gray-300 px-4 py-3">-</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0,50-1,50</td>
+                      <td className="border border-gray-300 px-4 py-3">4-6</td>
+                      <td className="border border-gray-300 px-4 py-3">15-25</td>
+                      <td className="border border-gray-300 px-4 py-3">-</td>
+                    </tr>
+                    <tr className="hover:bg-gray-50">
+                      <td className="border border-gray-300 px-4 py-3">0,75-1,25</td>
+                      <td className="border border-gray-300 px-4 py-3">4-8</td>
+                      <td className="border border-gray-300 px-4 py-3">20-30</td>
+                      <td className="border border-gray-300 px-4 py-3">-</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-[#15297c] to-[#0f1f5a]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -541,7 +672,7 @@ export default function LigaMetalicaPage() {
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#D98C3C] text-white font-semibold rounded-lg hover:bg-[#D98C3C]/90 transition-colors duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#15297c] text-white font-semibold rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 shadow-lg"
             >
               Fale Conosco
               <ArrowRight className="w-5 h-5" />

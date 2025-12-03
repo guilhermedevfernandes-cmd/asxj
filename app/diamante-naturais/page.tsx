@@ -203,10 +203,10 @@ export default function DiamanteNaturaisPage() {
             className="text-center text-white"
           >
             <h1 className="text-5xl sm:text-6xl font-bold mb-6">
-              Diamante Naturais
+              Diamante Natural
             </h1>
             <p className="text-xl sm:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-              Diamantes naturais selecionados para aplicações industriais que exigem características únicas de tenacidade, forma cristalina e propriedades térmicas superiores
+              Diamante natural selecionado para aplicações industriais que exigem características únicas de tenacidade, forma cristalina e propriedades térmicas superiores
             </p>
             <div className="flex items-center justify-center gap-4 text-sm text-gray-300 flex-wrap">
               <div className="flex items-center gap-2">
@@ -237,7 +237,7 @@ export default function DiamanteNaturaisPage() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Diamante Naturais - Excelência em Qualidade Natural
+              Diamante Natural - Excelência em Qualidade Natural
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               Os diamantes naturais compreendem diamantes de origem geológica, criteriosamente selecionados e classificados para aplicações industriais específicas que se beneficiam das características únicas dos cristais naturais. Formados sob condições extremas de pressão e temperatura no interior da Terra ao longo de bilhões de anos, os diamantes naturais apresentam propriedades cristalográficas, térmicas e mecânicas distintas que os tornam insubstituíveis em determinadas aplicações críticas.
@@ -301,7 +301,7 @@ export default function DiamanteNaturaisPage() {
                 </ul>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vantagens dos Diamantes Naturais</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Vantagens do Diamante Natural</h3>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-center">
                     <div className="w-1.5 h-1.5 bg-[#15297c] rounded-full mr-2" />

@@ -26,7 +26,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#D98C3C]">Links Rápidos</h3>
+            <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#15297c]">Links Rápidos</h3>
             <ul className="space-y-1 sm:space-y-2">
               <li>
                   <a href="#inicio" className="text-sm sm:text-base text-gray-300 hover:text-[#15297c] transition-colors">
@@ -53,7 +53,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#D98C3C]">Contato</h3>
+            <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4 text-[#15297c]">Contato</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li className="flex items-center gap-2 sm:gap-3">
                 <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-[#15297c] flex-shrink-0" />

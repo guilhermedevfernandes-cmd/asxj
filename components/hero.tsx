@@ -74,7 +74,7 @@ const Hero = () => {
                   className="object-contain"
                 />
               </div>
-              <span className="text-[#D98C3C] font-semibold text-lg">
+              <span className="text-[#15297c] font-semibold text-lg bg-white/20 px-3 py-1 rounded">
                 Desde 1981
               </span>
             </div>
@@ -92,9 +92,9 @@ const Hero = () => {
             {/* CTA Buttons with Magnetic Effect */}
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a href="https://wa.me/5511988575232" target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
-                <button className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95" style={{ backgroundColor: '#D98C3C', color: '#000000' }}>
-                  <span style={{ color: '#000000' }}>Solicite um Orçamento</span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" style={{ color: '#000000', stroke: '#000000' }} />
+                <button className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 font-bold px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 bg-[#15297c] text-white">
+                  <span>Solicite um Orçamento</span>
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </a>
               <a href="#produtos" className="w-full sm:w-auto">
@@ -114,10 +114,10 @@ const Hero = () => {
               <motion.div
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 hover:border-[#D98C3C]/50 transition-all duration-300 cursor-pointer"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 hover:border-[#15297c]/50 transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center justify-center gap-1 sm:gap-2 mb-1 sm:mb-2">
-                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#D98C3C]" />
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#15297c]" />
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">40+</div>
                 </div>
                 <div className="text-xs sm:text-sm text-gray-200 text-center">Anos de Experiência</div>
@@ -125,10 +125,10 @@ const Hero = () => {
               <motion.div
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 hover:border-[#D98C3C]/50 transition-all duration-300 cursor-pointer"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 hover:border-[#15297c]/50 transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center justify-center gap-1 sm:gap-2 mb-1 sm:mb-2">
-                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#D98C3C]" />
+                  <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#15297c]" />
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">5</div>
                 </div>
                 <div className="text-xs sm:text-sm text-gray-200 text-center">Linhas de Produtos</div>
@@ -136,10 +136,10 @@ const Hero = () => {
               <motion.div
                 whileHover={{ scale: 1.05, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 hover:border-[#D98C3C]/50 transition-all duration-300 cursor-pointer"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20 hover:border-[#15297c]/50 transition-all duration-300 cursor-pointer"
               >
                 <div className="flex items-center justify-center gap-1 sm:gap-2 mb-1 sm:mb-2">
-                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#D98C3C]" />
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-[#15297c]" />
                   <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-white">100%</div>
                 </div>
                 <div className="text-xs sm:text-sm text-gray-200 text-center">Foco em Qualidade</div>
@@ -154,7 +154,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative order-first lg:order-none flex items-center justify-center w-full"
           >
-            <div className="relative w-full h-[400px] sm:h-[450px] lg:h-[500px] xl:h-[550px] flex items-center justify-center">
+            <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[550px] xl:h-[600px] flex items-center justify-center">
               <div className="relative w-full h-full">
                 <Image
                   src="/FOTO DA DIREITA HERO/Imagem da direita Hero.png"

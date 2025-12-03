@@ -331,7 +331,7 @@ export default function CBNBorazonPage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
               Especificações Técnicas
             </h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Aplicações Principais</h3>
                 <ul className="space-y-2 text-gray-700">
@@ -375,6 +375,16 @@ export default function CBNBorazonPage() {
                 </ul>
               </div>
             </div>
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Opções de Revestimentos Disponíveis</h3>
+              <p className="text-gray-700 mb-2">
+                Revestimento tradicional em níquel disponível em 30%, 56%, 60% ou em qualquer outra 
+                porcentagem personalizada, conforme a necessidade do cliente.
+              </p>
+              <p className="text-gray-600">
+                Consulte a página de "Revestimentos" para informações adicionais e demais tipos de revestimento.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -397,7 +407,7 @@ export default function CBNBorazonPage() {
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#D98C3C] text-white font-semibold rounded-lg hover:bg-[#D98C3C]/90 transition-colors duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#15297c] text-white font-semibold rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 shadow-lg"
             >
               Fale Conosco
               <ArrowRight className="w-5 h-5" />

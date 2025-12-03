@@ -65,7 +65,7 @@ const Header = () => {
     { href: "/liga-metalica", label: "Liga Metálica" },
     { href: "/liga-resinoide", label: "Liga Resinoide" },
     { href: "/cbn-borazon", label: "CBN - Borazon" },
-    { href: "/diamante-naturais", label: "Diamante Naturais" },
+    { href: "/diamante-naturais", label: "Diamante Natural" },
     { href: "/revestimentos", label: "Revestimentos" },
   ];
 
@@ -103,7 +103,7 @@ const Header = () => {
                   className={`px-4 py-2 text-sm font-medium transition-colors rounded-md ${
                     isScrolled
                       ? "text-gray-700 hover:text-[#15297c] hover:bg-gray-50"
-                      : "text-white hover:text-[#D98C3C] hover:bg-white/10"
+                      : "text-white hover:text-[#15297c] hover:bg-white/10"
                   }`}
                 >
                   {link?.label ?? ""}
