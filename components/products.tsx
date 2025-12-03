@@ -15,6 +15,7 @@ const productLinks: Record<string, string> = {
   "borazon": "/cbn-borazon",
   "natural": "/diamante-naturais",
   "revestimentos": "/revestimentos",
+  "pcd-pdc": "/pcd",
 };
 
 const Products = () => {
@@ -154,6 +155,7 @@ const ProductCard = ({ product, index, inView }: any) => {
            product?.id === "metal-bond" ? "Ligante Metálico" : 
            product?.id === "borazon" ? "CBN - Borazon" :
            product?.id === "revestimentos" ? "Revestimentos" :
+           product?.id === "pcd-pdc" ? "PCD / PDC" :
            product?.name ?? ""}
         </h3>
         <p className="text-xs sm:text-sm font-semibold mb-3" style={{ color: borderColor }}>
