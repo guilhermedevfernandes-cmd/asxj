@@ -579,17 +579,13 @@ export default function LigaMetalicaPage() {
               transition={{ duration: 0.8 }}
               className="bg-white rounded-2xl shadow-lg p-8"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
-                Tamanhos Disponíveis
-              </h2>
               <div className="overflow-x-auto">
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="bg-[#15297c] text-white">
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 1</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 2</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 3</th>
-                      <th className="border border-gray-300 px-4 py-3 text-left font-semibold">Coluna 4</th>
+                      <th colSpan={4} className="border border-gray-300 px-4 py-3 text-center font-semibold text-xl">
+                        Tamanhos Disponíveis
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
