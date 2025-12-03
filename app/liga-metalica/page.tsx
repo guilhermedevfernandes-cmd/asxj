@@ -567,11 +567,6 @@ export default function LigaMetalicaPage() {
           </div>
         </section>
       )}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      )}
 
       {/* MB Table Section */}
       {selectedSeries === "MB" && (
