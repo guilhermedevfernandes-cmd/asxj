@@ -407,7 +407,7 @@ export default function CBNBorazonPage() {
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#15297c] text-white font-semibold rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 shadow-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#D98C3C] text-white font-semibold rounded-lg hover:bg-[#D98C3C]/90 transition-colors duration-300 shadow-lg"
             >
               Fale Conosco
               <ArrowRight className="w-5 h-5" />
