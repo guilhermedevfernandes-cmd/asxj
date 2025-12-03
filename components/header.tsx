@@ -67,6 +67,7 @@ const Header = () => {
     { href: "/cbn-borazon", label: "CBN - Borazon" },
     { href: "/diamante-naturais", label: "Diamante Natural" },
     { href: "/revestimentos", label: "Revestimentos" },
+    { href: "/pcd", label: "PCD & PCBN" },
   ];
 
   return (
