@@ -18,6 +18,16 @@ interface Product {
   features: string[];
 }
 
+interface ProductData {
+  id?: string;
+  name?: string;
+  subtitle?: string;
+  shortDesc?: string;
+  fullDesc?: string;
+  applications?: string[];
+  benefits?: string[];
+}
+
 // Array de produtos PCD - pode ser expandido com dados do catálogo
 const pcdProducts: Product[] = [
   // Adicione aqui os produtos específicos do catálogo
@@ -147,7 +157,14 @@ export default function PCDPage() {
   });
 
   // Busca as informações do JSON
-  const pcdData = contentData?.products?.find((p: any) => p.id === "pcd-pdc") || {};
+  const pcdData: ProductData = contentData?.products?.find((p: any) => p.id === "pcd-pdc") || {
+    subtitle: "",
+    name: "",
+    shortDesc: "",
+    fullDesc: "",
+    applications: [],
+    benefits: []
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
