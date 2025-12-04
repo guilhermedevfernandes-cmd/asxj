@@ -258,19 +258,7 @@ export default function PCDPage() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                <div className="relative w-28 h-28 mb-2">
-                  <Image
-                    src="/Logo da eid.png"
-                    alt="Logo EID"
-                    fill
-                    className="object-contain transition-all duration-300"
-                    style={selectedSeries !== "PCD" ? { 
-                      filter: "brightness(0) saturate(100%)",
-                      opacity: 0.7
-                    } : {}}
-                  />
-                </div>
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center justify-center gap-2 mb-2">
                   <Sparkles className="w-5 h-5" />
                   <span>PCD</span>
                 </div>
@@ -284,19 +272,7 @@ export default function PCDPage() {
                     : "text-gray-600 hover:text-gray-900"
                 }`}
               >
-                <div className="relative w-28 h-28 mb-2">
-                  <Image
-                    src="/Logo da eid.png"
-                    alt="Logo EID"
-                    fill
-                    className="object-contain transition-all duration-300"
-                    style={selectedSeries !== "PCBN" ? { 
-                      filter: "brightness(0) saturate(100%)",
-                      opacity: 0.7
-                    } : {}}
-                  />
-                </div>
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center justify-center gap-2 mb-2">
                   <Zap className="w-5 h-5" />
                   <span>PCBN</span>
                 </div>
