@@ -282,10 +282,15 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         </div>
 
         <div className="pt-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group">
+          <a
+            href="https://wa.me/5511988575232?text=Olá! Gostaria de solicitar um orçamento."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group"
+          >
             Solicitar Orçamento
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -472,8 +477,7 @@ export default function LigaMetalicaPage() {
                   <p className="text-lg text-gray-700 leading-relaxed">
                     Nossa série ESN é composta por diamantes sintéticos ideais para aplicações de serração e perfuração. 
                     Graças ao baixo e uniforme teor de inclusões metálicas, os cristais apresentam alta estabilidade térmica 
-                    e elevada resistência das partículas. Disponível nos tamanhos: 16/18, 18/20, 20/25, 20/30, 25/30, 30/35, 
-                    30/40, 35/40, 35/45, 40/45, 40/50, 45/50, 45/60, 50/60 e 50/70. Para opções com revestimento, visite também nossa página de "Revestimentos".
+                    e elevada resistência das partículas. Para opções com revestimento, visite também nossa página de "Revestimentos".
                   </p>
                 </div>
               ) : selectedSeries === "EDA" ? (
@@ -484,8 +488,7 @@ export default function LigaMetalicaPage() {
                   <p className="text-lg text-gray-700 leading-relaxed">
                     A série EDA é formada por diamantes sintéticos desenvolvidos para ligantes metálicos e eletrolíticos. 
                     Utilizados na usinagem de materiais não ferrosos, os produtos da EID foram criados para oferecer o melhor 
-                    desempenho em cada tipo de aplicação. Disponível nos tamanhos: 60/70, 70/80, 80/100, 100/120, 120/140, 
-                    140/170, 170/200, 200/230, 270/325, 325/400 e 400/500.
+                    desempenho em cada tipo de aplicação.
                   </p>
                 </div>
               ) : (
@@ -662,7 +665,9 @@ export default function LigaMetalicaPage() {
               Entre em contato conosco e descubra a solução perfeita para sua aplicação
             </p>
             <a
-              href="#contato"
+              href="https://wa.me/5511988575232?text=Olá! Gostaria de falar com vocês."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#D98C3C] text-white font-semibold rounded-lg hover:bg-[#D98C3C]/90 transition-colors duration-300 shadow-lg"
             >
               Fale Conosco

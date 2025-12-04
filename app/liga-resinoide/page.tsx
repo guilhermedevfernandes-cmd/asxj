@@ -169,10 +169,15 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         </div>
 
         <div className="pt-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group">
+          <a
+            href="https://wa.me/5511988575232?text=Olá! Gostaria de solicitar um orçamento."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group"
+          >
             Solicitar Orçamento
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -343,7 +348,9 @@ export default function LigaResinoidePage() {
               Entre em contato conosco e descubra a solução perfeita para sua aplicação
             </p>
             <a
-              href="#contato"
+              href="https://wa.me/5511988575232?text=Olá! Gostaria de falar com vocês."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#D98C3C] text-white font-semibold rounded-lg hover:bg-[#D98C3C]/90 transition-colors duration-300 shadow-lg"
             >
               Fale Conosco

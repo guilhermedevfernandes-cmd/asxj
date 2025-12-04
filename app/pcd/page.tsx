@@ -21,7 +21,7 @@ const pcdProducts: Product[] = [
   {
     code: "PCD Padrão",
     title: "PCD Padrão",
-    description: "Insertos e ferramentas de diamante policristalino (PCD) para usinagem de materiais não ferrosos. Ideal para aplicações que exigem alta precisão e durabilidade.",
+    description: "Discos inteiros ou cortados de diamante policristalino (PCD) para usinagem de materiais não ferrosos. Ideal para aplicações que exigem alta precisão e durabilidade.",
     type: "PCD - Polycrystalline Diamond",
     features: [
       "Excelente resistência ao desgaste",
@@ -37,7 +37,7 @@ const pcbnProducts: Product[] = [
   {
     code: "PCBN Padrão",
     title: "PCBN Padrão",
-    description: "Insertos e ferramentas de nitreto cúbico de boro policristalino (PCBN) para usinagem de materiais ferrosos endurecidos. Desempenho superior em altas temperaturas.",
+    description: "Discos inteiros ou cortados de nitreto cúbico de boro policristalino (PCBN) para usinagem de materiais ferrosos endurecidos. Desempenho superior em altas temperaturas.",
     type: "PCBN - Polycrystalline Cubic Boron Nitride",
     features: [
       "Desempenho excepcional em altas temperaturas",
@@ -64,11 +64,11 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
 
   // Determina o caminho da imagem baseado no código do produto
   const getImagePath = (code: string, type: string) => {
-    // Tenta encontrar a imagem na pasta PCD
+    // Usa as imagens da pasta FOTOS PRODUTOS PCD
     if (type.includes("PCD")) {
-      return `/PCD/${code.replace(/\s+/g, '')}.png`;
+      return `/FOTOS PRODUTOS PCD/Imagem PCD e PCBN.png`;
     } else if (type.includes("PCBN")) {
-      return `/PCBN/${code.replace(/\s+/g, '')}.png`;
+      return `/FOTOS PRODUTOS PCD/Imagem PCD e PCBN.png`;
     }
     return null;
   };
@@ -110,16 +110,6 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       </div>
       
       <div className="relative p-6">
-        {/* Logo EID */}
-        <div className="relative w-20 h-20 mb-4">
-          <Image
-            src="/Logo da eid.png"
-            alt="Logo EID"
-            fill
-            className="object-contain brightness-0 opacity-70"
-          />
-        </div>
-        
         <div className="mb-4">
           <h3 className="text-2xl font-bold text-gray-900 mb-2">{product.title}</h3>
           <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold border bg-blue-100 text-blue-800 border-blue-300">
@@ -151,10 +141,15 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         </div>
 
         <div className="pt-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group">
+          <a
+            href="https://wa.me/5511988575232?text=Olá! Gostaria de solicitar um orçamento."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group"
+          >
             Solicitar Orçamento
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -330,7 +325,7 @@ export default function PCDPage() {
                     PCD – Diamante Policristalino
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                    Ideal para usinagem de materiais não ferrosos, o PCD garante excelente resistência ao desgaste, alta estabilidade térmica, aresta de corte extremamente afiada e acabamento superficial superior.
+                    Discos inteiros ou cortados de diamante policristalino (PCD). Ideal para usinagem de materiais não ferrosos, o PCD garante excelente resistência ao desgaste, alta estabilidade térmica, aresta de corte extremamente afiada e acabamento superficial superior.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     <strong>Aplicações:</strong> Alumínio (inclusive alto teor de silício), cobre, plásticos, MDF, madeira, cerâmicas verdes, compósitos e MMC.
@@ -342,7 +337,7 @@ export default function PCDPage() {
                     PCBN – Nitreto Cúbico de Boro Policristalino
                   </h2>
                   <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                    Recomendado para materiais ferrosos endurecidos, o PCBN oferece desempenho excepcional em altas temperaturas, vida útil muito superior ao carbeto e estabilidade em corte contínuo e interrompido.
+                    Discos inteiros ou cortados de nitreto cúbico de boro policristalino (PCBN). Recomendado para materiais ferrosos endurecidos, o PCBN oferece desempenho excepcional em altas temperaturas, vida útil muito superior ao carbeto e estabilidade em corte contínuo e interrompido.
                   </p>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     <strong>Aplicações:</strong> Aços endurecidos, ferros fundidos, sinterizados, superligas (ex.: Inconel), componentes automotivos e peças de alta resistência ao desgaste.

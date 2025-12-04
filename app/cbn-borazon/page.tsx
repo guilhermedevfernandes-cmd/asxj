@@ -197,10 +197,15 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         </div>
 
         <div className="pt-4 border-t border-gray-200">
-          <button className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group">
+          <a
+            href="https://wa.me/5511988575232?text=Olá! Gostaria de solicitar um orçamento."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-[#15297c] text-white rounded-lg hover:bg-[#0f1f5a] transition-colors duration-300 font-medium group"
+          >
             Solicitar Orçamento
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-          </button>
+          </a>
         </div>
       </div>
     </motion.div>
@@ -295,9 +300,6 @@ export default function CBNBorazonPage() {
               Os abrasivos CBN são ideais para retificação de aços endurecidos, aços rápidos, aços ferramenta 
               e outras ligas ferrosas que exigem acabamento superior e controle dimensional preciso.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              <strong>Tamanhos disponíveis:</strong> 20/30, 30/40, 40/45, 45/50, 50/60, 60/70, 70/80, 80/100, 100/120, 120/140, 140/170, 170/200, 200/230, 230/270, 270/325, 325/400 e 400/500.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -376,6 +378,10 @@ export default function CBNBorazonPage() {
               </div>
             </div>
             <div className="border-t border-gray-200 pt-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Tamanhos Disponíveis</h3>
+              <p className="text-gray-700 mb-6">
+                20/30, 30/40, 40/45, 45/50, 50/60, 60/70, 70/80, 80/100, 100/120, 120/140, 140/170, 170/200, 200/230, 230/270, 270/325, 325/400 e 400/500.
+              </p>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Opções de Revestimentos Disponíveis</h3>
               <p className="text-gray-700 mb-2">
                 Revestimento tradicional em níquel disponível em 30%, 56%, 60% ou em qualquer outra 
@@ -406,7 +412,9 @@ export default function CBNBorazonPage() {
               Entre em contato conosco e descubra a solução perfeita para sua aplicação
             </p>
             <a
-              href="#contato"
+              href="https://wa.me/5511988575232?text=Olá! Gostaria de falar com vocês."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-[#D98C3C] text-white font-semibold rounded-lg hover:bg-[#D98C3C]/90 transition-colors duration-300 shadow-lg"
             >
               Fale Conosco

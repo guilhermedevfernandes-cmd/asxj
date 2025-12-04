@@ -19,8 +19,11 @@ const Footer = () => {
                 className="object-contain"
               />
             </div>
-            <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+            <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-2">
               Excelência e desempenho em diamantes industriais e superabrasivos desde 1981.
+            </p>
+            <p className="text-xs sm:text-sm text-gray-400">
+              CNPJ: 47.071.402/0001-40
             </p>
           </div>
 

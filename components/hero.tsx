@@ -161,7 +161,7 @@ const Hero = () => {
                   alt="Diamantes industriais AS&ASJ"
                   fill
                   className="object-contain"
-                  style={{ transform: 'scale(1.5)' }}
+                  style={{ transform: 'scale(1.7)' }}
                   priority
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
                 />
