@@ -152,7 +152,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative order-first lg:order-none flex items-center justify-center w-full"
+            className="relative order-last lg:order-none flex items-center justify-center w-full"
           >
             <div className="relative w-full h-[450px] sm:h-[500px] lg:h-[550px] xl:h-[600px] flex items-center justify-center">
               <div className="relative w-full h-full">
