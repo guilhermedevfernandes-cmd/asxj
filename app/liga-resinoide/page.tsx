@@ -49,7 +49,7 @@ const resinoideProducts: Product[] = [
   {
     code: "EDA 2023",
     title: "EDA 2023",
-    description: "Produto desenvolvido para alcançar arestas de corte em nível micron, apresentando fraturamento microcontrolado e autocorte. Cristal autoafiável que gera uma ação de corte livre e alta retenção no ligante, proporcionando longa vida útil, corte rápido e acabamento de superfície premium.",
+    description: "Este abrasivo diamantado é composto por cristais de formato irregular. Sua estrutura rugosa e em mosaico garante excelente retenção no ligante, e suas propriedades de microfratura controlada o tornaram o produto de escolha para ligantes resinoides e vitrificados de alta qualidade, tanto para a retificação úmida quanto seca de carboneto de tungstênio.",
     strength: "Força intermediária",
     features: [
       "Arestas de corte em nível micron",
